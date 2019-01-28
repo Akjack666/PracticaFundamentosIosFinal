@@ -840,16 +840,18 @@
 <attribute name="Associates" ></attribute>
 <attribute name="Created" >2018-01-30T15:24:43+00:00</attribute>
 <attribute name="IsComposite" >false</attribute>
-<attribute name="MapScrollX" >0</attribute>
-<attribute name="MapScrollY" >0</attribute>
+<attribute name="MapScrollX" >7.692144223</attribute>
+<attribute name="MapScrollY" >16.4562933</attribute>
 <attribute name="Modified" >2018-01-30T15:24:43+00:00</attribute>
 <attribute name="Name" >KnowledgeMap</attribute>
 <attribute name="Xpos" >0</attribute>
 <attribute name="Ypos" >0</attribute>
 <composites>
-<composite nodes="1497797018 1502376090 " name="" instantiates="" >
-</composite>
 <composite nodes="1497794255 1497794282 1497794341 1497797591 1497794291 1497794304 " name="" instantiates="" >
+</composite>
+<composite nodes="1497792994 1497792998 " name="" instantiates="" >
+</composite>
+<composite nodes="1497797018 1502376090 " name="" instantiates="" >
 </composite>
 <composite nodes="1497793494 1497793531 " name="" instantiates="" >
 </composite>
@@ -857,20 +859,129 @@
 </composite>
 <composite nodes="1497793176 1497793177 1497807726 " name="" instantiates="" >
 </composite>
-<composite nodes="1497792994 1497792998 " name="" instantiates="" >
-</composite>
 </composites>
+<item ID="1497794255" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T15:57:34+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="MapScrollX" >0</attribute>
+<attribute name="MapScrollY" >0</attribute>
+<attribute name="Modified" >2017-06-18T15:57:34+00:00</attribute>
+<attribute name="Name" >Target / Action</attribute>
+<attribute name="SelectionCount" >75</attribute>
+<attribute name="Width" >6.061684608</attribute>
+<attribute name="Xpos" >-25.7175293</attribute>
+<attribute name="Ypos" >2.349365236</attribute>
+</item>
+<item ID="1497794282" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T15:58:01+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="MapScrollX" >0</attribute>
+<attribute name="MapScrollY" >0</attribute>
+<attribute name="Modified" >2017-06-18T15:58:01+00:00</attribute>
+<attribute name="Name" >Delegate</attribute>
+<attribute name="SelectionCount" >79</attribute>
+<attribute name="Width" >6.061684608</attribute>
+<attribute name="Xpos" >-25.7175293</attribute>
+<attribute name="Ypos" >3.79701172</attribute>
+</item>
+<item ID="1497794341" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T15:59:00+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="MapScrollX" >0</attribute>
+<attribute name="MapScrollY" >0</attribute>
+<attribute name="Modified" >2017-06-18T15:59:00+00:00</attribute>
+<attribute name="Name" >Closures</attribute>
+<attribute name="SelectionCount" >78</attribute>
+<attribute name="Width" >6.058671951</attribute>
+<attribute name="Xpos" >-25.76984145</attribute>
+<attribute name="Ypos" >6.61746588</attribute>
+</item>
+<item ID="1497797591" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T16:53:10+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="MapScrollX" >0</attribute>
+<attribute name="MapScrollY" >0</attribute>
+<attribute name="Modified" >2017-06-18T16:53:10+00:00</attribute>
+<attribute name="Name" >RxSwift</attribute>
+<attribute name="SelectionCount" >77</attribute>
+<attribute name="Width" >6.058671951</attribute>
+<attribute name="Xpos" >-25.76984145</attribute>
+<attribute name="Ypos" >8.06511236</attribute>
+</item>
+<item ID="1497794291" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T15:58:10+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="Modified" >2017-06-18T15:58:10+00:00</attribute>
+<attribute name="Name" >Notifications</attribute>
+<attribute name="SelectionCount" >76</attribute>
+<attribute name="Width" >4.082802773</attribute>
+<attribute name="Xpos" >-23.74178219</attribute>
+<attribute name="Ypos" >5.244658205</attribute>
+</item>
+<item ID="1497794304" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >RxSwift;KVO;Target / Action;Delegate;Closures;Notifications</attribute>
+<attribute name="Color" >#006abb</attribute>
+<attribute name="Created" >2017-06-18T15:58:23+00:00</attribute>
+<attribute name="Height" >1.447646484</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="Modified" >2017-06-18T15:58:23+00:00</attribute>
+<attribute name="Name" >KVO</attribute>
+<attribute name="SelectionCount" >78</attribute>
+<attribute name="Width" >1.975747108</attribute>
+<attribute name="Xpos" >-25.7175293</attribute>
+<attribute name="Ypos" >5.244658205</attribute>
+</item>
+<item ID="1497792994" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >Swift;Objective C</attribute>
+<attribute name="Color" >#005493</attribute>
+<attribute name="Created" >2017-06-18T15:36:33+00:00</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="MapScrollX" >0.01069260982</attribute>
+<attribute name="MapScrollY" >0</attribute>
+<attribute name="Modified" >2017-06-18T15:36:33+00:00</attribute>
+<attribute name="Name" >Swift</attribute>
+<attribute name="SelectionCount" >17</attribute>
+<attribute name="Xpos" >-7.941908844</attribute>
+<attribute name="Ypos" >11.37487793</attribute>
+</item>
+<item ID="1497792998" Creator="Fernando Rodriguez" >
+<attribute name="Associates" >Swift;Objective C</attribute>
+<attribute name="Color" >#005493</attribute>
+<attribute name="Created" >2017-06-18T15:36:37+00:00</attribute>
+<attribute name="IsComposite" >true</attribute>
+<attribute name="Modified" >2017-06-18T15:36:37+00:00</attribute>
+<attribute name="Name" >Objective C</attribute>
+<attribute name="SelectionCount" >19</attribute>
+<attribute name="Width" >3.48614502</attribute>
+<attribute name="Xpos" >-4.941908844</attribute>
+<attribute name="Ypos" >11.37487793</attribute>
+</item>
 <item ID="1497797018" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Persistence;Webservices</attribute>
+<attribute name="Associates" >Webservices;Persistence</attribute>
 <attribute name="Color" >#941651</attribute>
 <attribute name="Created" >2017-06-18T16:43:37+00:00</attribute>
 <attribute name="Height" >2.699689854</attribute>
 <attribute name="IsComposite" >true</attribute>
 <attribute name="MapScrollX" >-8.107565355</attribute>
-<attribute name="MapScrollY" >-6.896238328</attribute>
+<attribute name="MapScrollY" >-7.271238328</attribute>
 <attribute name="Modified" >2017-06-18T16:43:37+00:00</attribute>
 <attribute name="Name" >Persistence</attribute>
-<attribute name="SelectionCount" >41</attribute>
+<attribute name="SelectionCount" >45</attribute>
 <attribute name="TitleHeight" >1.028349876</attribute>
 <attribute name="Width" >4.012620505</attribute>
 <attribute name="Xpos" >5.338985893</attribute>
@@ -962,102 +1073,16 @@
 </adornment>
 </item>
 <item ID="1502376090" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Persistence;Webservices</attribute>
+<attribute name="Associates" >Webservices;Persistence</attribute>
 <attribute name="Color" >#393093</attribute>
 <attribute name="Created" >2017-08-10T16:41:29+00:00</attribute>
 <attribute name="IsComposite" >true</attribute>
 <attribute name="Modified" >2017-08-10T16:41:29+00:00</attribute>
 <attribute name="Name" >Webservices</attribute>
-<attribute name="SelectionCount" >14</attribute>
+<attribute name="SelectionCount" >16</attribute>
 <attribute name="Width" >3.47053188</attribute>
 <attribute name="Xpos" >1.79239381</attribute>
 <attribute name="Ypos" >-10.79968262</attribute>
-</item>
-<item ID="1497794255" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T15:57:34+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="MapScrollX" >0</attribute>
-<attribute name="MapScrollY" >0</attribute>
-<attribute name="Modified" >2017-06-18T15:57:34+00:00</attribute>
-<attribute name="Name" >Target / Action</attribute>
-<attribute name="SelectionCount" >71</attribute>
-<attribute name="Width" >6.061684608</attribute>
-<attribute name="Xpos" >-24.96625685</attribute>
-<attribute name="Ypos" >2.331379254</attribute>
-</item>
-<item ID="1497794282" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T15:58:01+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="MapScrollX" >0</attribute>
-<attribute name="MapScrollY" >0</attribute>
-<attribute name="Modified" >2017-06-18T15:58:01+00:00</attribute>
-<attribute name="Name" >Delegate</attribute>
-<attribute name="SelectionCount" >75</attribute>
-<attribute name="Width" >6.061684608</attribute>
-<attribute name="Xpos" >-24.96625685</attribute>
-<attribute name="Ypos" >3.779025738</attribute>
-</item>
-<item ID="1497794341" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T15:59:00+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="MapScrollX" >0</attribute>
-<attribute name="MapScrollY" >0</attribute>
-<attribute name="Modified" >2017-06-18T15:59:00+00:00</attribute>
-<attribute name="Name" >Closures</attribute>
-<attribute name="SelectionCount" >74</attribute>
-<attribute name="Width" >6.058671951</attribute>
-<attribute name="Xpos" >-25.018569</attribute>
-<attribute name="Ypos" >6.599479898</attribute>
-</item>
-<item ID="1497797591" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T16:53:10+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="MapScrollX" >0</attribute>
-<attribute name="MapScrollY" >0</attribute>
-<attribute name="Modified" >2017-06-18T16:53:10+00:00</attribute>
-<attribute name="Name" >RxSwift</attribute>
-<attribute name="SelectionCount" >73</attribute>
-<attribute name="Width" >6.058671951</attribute>
-<attribute name="Xpos" >-25.018569</attribute>
-<attribute name="Ypos" >8.047126378</attribute>
-</item>
-<item ID="1497794291" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T15:58:10+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="Modified" >2017-06-18T15:58:10+00:00</attribute>
-<attribute name="Name" >Notifications</attribute>
-<attribute name="SelectionCount" >72</attribute>
-<attribute name="Width" >4.082802773</attribute>
-<attribute name="Xpos" >-22.99050974</attribute>
-<attribute name="Ypos" >5.226672223</attribute>
-</item>
-<item ID="1497794304" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Target / Action;Delegate;Closures;RxSwift;Notifications;KVO</attribute>
-<attribute name="Color" >#006abb</attribute>
-<attribute name="Created" >2017-06-18T15:58:23+00:00</attribute>
-<attribute name="Height" >1.447646484</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="Modified" >2017-06-18T15:58:23+00:00</attribute>
-<attribute name="Name" >KVO</attribute>
-<attribute name="SelectionCount" >74</attribute>
-<attribute name="Width" >1.975747108</attribute>
-<attribute name="Xpos" >-24.96625685</attribute>
-<attribute name="Ypos" >5.226672223</attribute>
 </item>
 <item ID="1497793494" Creator="Fernando Rodriguez" >
 <attribute name="Associates" >AutoLayout;Struts &amp; Springs</attribute>
@@ -1070,10 +1095,10 @@
 <attribute name="MapScrollY" >0</attribute>
 <attribute name="Modified" >2017-06-18T15:44:53+00:00</attribute>
 <attribute name="Name" >AutoLayout</attribute>
-<attribute name="SelectionCount" >26</attribute>
+<attribute name="SelectionCount" >31</attribute>
 <attribute name="Width" >3.226528168</attribute>
-<attribute name="Xpos" >26.40013217</attribute>
-<attribute name="Ypos" >-8.75854492</attribute>
+<attribute name="Xpos" >24.51634025</attribute>
+<attribute name="Ypos" >-9.286621092</attribute>
 </item>
 <item ID="1497793531" Creator="Fernando Rodriguez" >
 <attribute name="Associates" >AutoLayout;Struts &amp; Springs</attribute>
@@ -1084,10 +1109,10 @@
 <attribute name="IsComposite" >true</attribute>
 <attribute name="Modified" >2017-06-18T15:45:30+00:00</attribute>
 <attribute name="Name" >Struts &amp; Springs</attribute>
-<attribute name="SelectionCount" >26</attribute>
+<attribute name="SelectionCount" >31</attribute>
 <attribute name="Width" >3.226528168</attribute>
-<attribute name="Xpos" >26.40013217</attribute>
-<attribute name="Ypos" >-6.764398957</attribute>
+<attribute name="Xpos" >24.51634025</attribute>
+<attribute name="Ypos" >-7.292475129</attribute>
 </item>
 <item ID="1502376189" Creator="Fernando Rodriguez" >
 <attribute name="Associates" >REST;GraphQL</attribute>
@@ -1319,7 +1344,7 @@ https://stedolan.github.io/jq/
 <attribute name="IsComposite" >false</attribute>
 <attribute name="Modified" >2017-08-10T17:05:56+00:00</attribute>
 <attribute name="Name" >With graphql-voyager you can visually explore your GraphQL API as an interactive graph. This is a great tool when designing or discussing your data model. It includes multiple example GraphQL schemas and also allows you to connect it to your own GraphQL endpoint. What are you waiting for, explore your API!</attribute>
-<attribute name="SelectionCount" >1</attribute>
+<attribute name="SelectionCount" >3</attribute>
 <attribute name="Xpos" >31.5</attribute>
 <attribute name="Ypos" >0</attribute>
 <text >https://apis.guru</text>
@@ -1371,31 +1396,6 @@ https://stedolan.github.io/jq/
 <attribute name="Xpos" >22.73857949</attribute>
 <attribute name="Ypos" >0.5964172949</attribute>
 </item>
-<item ID="1497792994" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Swift;Objective C</attribute>
-<attribute name="Color" >#005493</attribute>
-<attribute name="Created" >2017-06-18T15:36:33+00:00</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="MapScrollX" >0.01069260982</attribute>
-<attribute name="MapScrollY" >0</attribute>
-<attribute name="Modified" >2017-06-18T15:36:33+00:00</attribute>
-<attribute name="Name" >Swift</attribute>
-<attribute name="SelectionCount" >16</attribute>
-<attribute name="Xpos" >-7.561317708</attribute>
-<attribute name="Ypos" >11.81719748</attribute>
-</item>
-<item ID="1497792998" Creator="Fernando Rodriguez" >
-<attribute name="Associates" >Swift;Objective C</attribute>
-<attribute name="Color" >#005493</attribute>
-<attribute name="Created" >2017-06-18T15:36:37+00:00</attribute>
-<attribute name="IsComposite" >true</attribute>
-<attribute name="Modified" >2017-06-18T15:36:37+00:00</attribute>
-<attribute name="Name" >Objective C</attribute>
-<attribute name="SelectionCount" >18</attribute>
-<attribute name="Width" >3.48614502</attribute>
-<attribute name="Xpos" >-4.561317708</attribute>
-<attribute name="Ypos" >11.81719748</attribute>
-</item>
 <item ID="1497792930" Creator="Fernando Rodriguez" >
 <attribute name="Associates" ></attribute>
 <attribute name="Badge" >frank</attribute>
@@ -1405,9 +1405,9 @@ https://stedolan.github.io/jq/
 <attribute name="IsComposite" >false</attribute>
 <attribute name="Modified" >2017-06-18T15:35:29+00:00</attribute>
 <attribute name="Name" >iOS Developer</attribute>
-<attribute name="SelectionCount" >34</attribute>
+<attribute name="SelectionCount" >35</attribute>
 <attribute name="Width" >6.79545386</attribute>
-<attribute name="Xpos" >-3.64442749</attribute>
+<attribute name="Xpos" >-3.397984367</attribute>
 <attribute name="Ypos" >-1.127207807</attribute>
 </item>
 <item ID="1497792962" Creator="Fernando Rodriguez" >
@@ -1473,10 +1473,10 @@ https://stedolan.github.io/jq/
 <attribute name="IsComposite" >false</attribute>
 <attribute name="Modified" >2017-06-18T15:57:21+00:00</attribute>
 <attribute name="Name" >MVC</attribute>
-<attribute name="SelectionCount" >13</attribute>
+<attribute name="SelectionCount" >15</attribute>
 <attribute name="Width" >3</attribute>
-<attribute name="Xpos" >-21.63933126</attribute>
-<attribute name="Ypos" >-5.573507684</attribute>
+<attribute name="Xpos" >-24.15063477</attribute>
+<attribute name="Ypos" >-5.247558592</attribute>
 </item>
 <item ID="1497800546" Creator="Fernando Rodriguez" >
 <attribute name="Associates" ></attribute>
@@ -1508,11 +1508,11 @@ https://stedolan.github.io/jq/
 <attribute name="Created" >2017-06-18T16:07:14+00:00</attribute>
 <attribute name="Height" >2.834958307</attribute>
 <attribute name="IsComposite" >false</attribute>
-<attribute name="MapScrollX" >-6.125853246</attribute>
-<attribute name="MapScrollY" >-6.210764136</attribute>
+<attribute name="MapScrollX" >-6.110228246</attribute>
+<attribute name="MapScrollY" >-6.210764135</attribute>
 <attribute name="Modified" >2017-06-18T16:31:25+00:00</attribute>
 <attribute name="Name" >Combinators</attribute>
-<attribute name="SelectionCount" >33</attribute>
+<attribute name="SelectionCount" >35</attribute>
 <attribute name="Width" >4.586962541</attribute>
 <attribute name="Xpos" >17.26305493</attribute>
 <attribute name="Ypos" >5.473899837</attribute>
@@ -1611,11 +1611,11 @@ See the Settings App on an iPad</text>
 <attribute name="Created" >2017-06-18T16:07:15+00:00</attribute>
 <attribute name="Height" >3.129989203</attribute>
 <attribute name="IsComposite" >false</attribute>
-<attribute name="MapScrollX" >-9.620849041</attribute>
-<attribute name="MapScrollY" >-5.809698197</attribute>
+<attribute name="MapScrollX" >-9.44026794</attribute>
+<attribute name="MapScrollY" >-6.184698198</attribute>
 <attribute name="Modified" >2017-06-18T16:07:15+00:00</attribute>
 <attribute name="Name" >Consumers</attribute>
-<attribute name="SelectionCount" >39</attribute>
+<attribute name="SelectionCount" >41</attribute>
 <attribute name="Width" >4.586962541</attribute>
 <attribute name="Xpos" >17.26305493</attribute>
 <attribute name="Ypos" >11.90419671</attribute>
@@ -1662,11 +1662,11 @@ See the Settings App on an iPad</text>
 <attribute name="Modified" >2017-06-18T16:21:45+00:00</attribute>
 <attribute name="Name" >Both ask a DataSource what should be displayed</attribute>
 <attribute name="Searchable" >false</attribute>
-<attribute name="SelectionCount" >6</attribute>
+<attribute name="SelectionCount" >7</attribute>
 <attribute name="SortAlsoTransform" >normal</attribute>
 <attribute name="SortTransform" >normal</attribute>
 <attribute name="Width" >21.14097374</attribute>
-<attribute name="Xpos" >-30.83780179</attribute>
+<attribute name="Xpos" >-31.55297738</attribute>
 <attribute name="Ypos" >-24.95494107</attribute>
 </adornment>
 <adornment ID="1497795888" Creator="Fernando Rodriguez" >
@@ -1714,7 +1714,7 @@ See the Settings App on an iPad</text>
 <attribute name="MapScrollY" >0.0078125</attribute>
 <attribute name="Modified" >2017-06-18T16:30:27+00:00</attribute>
 <attribute name="Name" >Pickers</attribute>
-<attribute name="SelectionCount" >25</attribute>
+<attribute name="SelectionCount" >27</attribute>
 <attribute name="Width" >4.586962541</attribute>
 <attribute name="Xpos" >17.26305493</attribute>
 <attribute name="Ypos" >8.970458474</attribute>
@@ -1742,7 +1742,7 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 <attribute name="MapScrollY" >-1.900290446</attribute>
 <attribute name="Modified" >2017-06-18T17:36:01+00:00</attribute>
 <attribute name="Name" >Concurrency &amp; Network</attribute>
-<attribute name="SelectionCount" >29</attribute>
+<attribute name="SelectionCount" >31</attribute>
 <attribute name="TitleHeight" >1.587861657</attribute>
 <attribute name="Width" >4.062893658</attribute>
 <attribute name="Xpos" >-10.53130404</attribute>
@@ -1814,24 +1814,24 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 <attribute name="Created" >2017-06-18T17:44:54+00:00</attribute>
 <attribute name="Height" >13.59447955</attribute>
 <attribute name="IsComposite" >false</attribute>
-<attribute name="MapScrollX" >5.391631772</attribute>
-<attribute name="MapScrollY" >3.636838701</attribute>
+<attribute name="MapScrollX" >5.377614215</attribute>
+<attribute name="MapScrollY" >3.630852838</attribute>
 <attribute name="Modified" >2017-06-18T17:44:54+00:00</attribute>
 <attribute name="Name" >iOS Fundamentals With Swift</attribute>
 <attribute name="PlotColor" >#ebebeb</attribute>
-<attribute name="SelectionCount" >42</attribute>
+<attribute name="SelectionCount" >44</attribute>
 <attribute name="Width" >21.9958679</attribute>
 <attribute name="Xpos" >-21.0435689</attribute>
 <attribute name="Ypos" >18.22655587</attribute>
 <composites>
-<composite nodes="1497801205 1497801144 1497801145 " name="" instantiates="" >
+<composite nodes="1497801144 1497801145 1497801205 " name="" instantiates="" >
 </composite>
 <composite nodes="1497801129 1497801036 " name="" instantiates="" >
 </composite>
 </composites>
 <item ID="1497801144" Creator="Fernando Rodriguez" >
 <attribute name="Alias" >1497794304</attribute>
-<attribute name="Associates" >KVO;Notifications;Closures</attribute>
+<attribute name="Associates" >Notifications;KVO;Closures</attribute>
 <attribute name="Created" >2017-06-18T15:58:23+00:00</attribute>
 <attribute name="Height" >1.447646484</attribute>
 <attribute name="IsComposite" >true</attribute>
@@ -1844,7 +1844,7 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 </item>
 <item ID="1497801145" Creator="Fernando Rodriguez" >
 <attribute name="Alias" >1497794291</attribute>
-<attribute name="Associates" >KVO;Notifications;Closures</attribute>
+<attribute name="Associates" >Notifications;KVO;Closures</attribute>
 <attribute name="Created" >2017-06-18T15:58:10+00:00</attribute>
 <attribute name="Height" >1.447646484</attribute>
 <attribute name="IsComposite" >true</attribute>
@@ -1900,7 +1900,7 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 </item>
 <item ID="1497801205" Creator="Fernando Rodriguez" >
 <attribute name="Alias" >1497794341</attribute>
-<attribute name="Associates" >KVO;Notifications;Closures</attribute>
+<attribute name="Associates" >Notifications;KVO;Closures</attribute>
 <attribute name="Created" >2017-06-18T15:59:00+00:00</attribute>
 <attribute name="Height" >1.447646484</attribute>
 <attribute name="IsComposite" >true</attribute>
@@ -1913,7 +1913,7 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 </item>
 <item ID="1497801129" Creator="Fernando Rodriguez" >
 <attribute name="Alias" >1497794282</attribute>
-<attribute name="Associates" >Delegate;Target / Action</attribute>
+<attribute name="Associates" >Target / Action;Delegate</attribute>
 <attribute name="Created" >2017-06-18T15:58:01+00:00</attribute>
 <attribute name="Height" >1.447646484</attribute>
 <attribute name="IsComposite" >true</attribute>
@@ -1926,7 +1926,7 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 </item>
 <item ID="1497801036" Creator="Fernando Rodriguez" >
 <attribute name="Alias" >1497794255</attribute>
-<attribute name="Associates" >Delegate;Target / Action</attribute>
+<attribute name="Associates" >Target / Action;Delegate</attribute>
 <attribute name="Created" >2017-06-18T15:57:34+00:00</attribute>
 <attribute name="Height" >1.447646484</attribute>
 <attribute name="IsComposite" >true</attribute>
@@ -1966,15 +1966,16 @@ Create a Picker, set it up, give it a delegate and wait for the response.
 </item>
 <item ID="1497863141" Creator="Fernando Rodriguez" >
 <attribute name="Associates" ></attribute>
+<attribute name="BadgeSize" >64</attribute>
 <attribute name="Color" >#942093</attribute>
 <attribute name="Created" >2017-06-19T11:05:40+00:00</attribute>
 <attribute name="Height" >5.815332248</attribute>
 <attribute name="IsComposite" >false</attribute>
-<attribute name="MapScrollX" >-5.68501002</attribute>
-<attribute name="MapScrollY" >-3.641998383</attribute>
+<attribute name="MapScrollX" >-5.685870068</attribute>
+<attribute name="MapScrollY" >-4.015424813</attribute>
 <attribute name="Modified" >2017-06-19T11:05:40+00:00</attribute>
 <attribute name="Name" >Dependency Managers</attribute>
-<attribute name="SelectionCount" >13</attribute>
+<attribute name="SelectionCount" >15</attribute>
 <attribute name="Width" >4.362734811</attribute>
 <attribute name="Xpos" >2.727142065</attribute>
 <attribute name="Ypos" >10.8370103</attribute>
@@ -2028,11 +2029,11 @@ https://guides.cocoapods.org/using/using-cocoapods.html
 <attribute name="MapScrollY" >0</attribute>
 <attribute name="Modified" >2017-06-19T11:15:08+00:00</attribute>
 <attribute name="Name" >Swift Package manager</attribute>
-<attribute name="SelectionCount" >14</attribute>
+<attribute name="SelectionCount" >15</attribute>
 <attribute name="URL" >https://swift.org/package-manager/#conceptual-overview</attribute>
 <attribute name="Width" >4.837801174</attribute>
-<attribute name="Xpos" >-4.186595121</attribute>
-<attribute name="Ypos" >-12.74587839</attribute>
+<attribute name="Xpos" >-4.184240136</attribute>
+<attribute name="Ypos" >-12.75985353</attribute>
 <text >Created for server-side Swift. The standard on Linux. Will be ported and integrated with Xcode and eventually will supersede CocoaPods.</text>
 <rtfd >cnRmZAAAAAADAAAAAgAAAAcAAABUWFQucnRmAQAAAC6PAQAAKwAAAAEAAACHAQAAe1xydGYxXGFuc2lcYW5zaWNwZzEyNTJcY29jb2FydGYxNTA0XGNvY29hc3VicnRmODMwCntcZm9udHRibFxmMFxmbmlsXGZjaGFyc2V0MCBNZXJjdXJ5U1NtLUJvb2s7fQp7XGNvbG9ydGJsO1xyZWQyNTVcZ3JlZW4yNTVcYmx1ZTI1NTt9CntcKlxleHBhbmRlZGNvbG9ydGJsOzt9ClxwYXJkXHR4MzYwXHR4NzIwXHR4MTA4MFx0eDE0NDBccmk0MDBcc2I4MFxzYTgwXHBhcmRpcm5hdHVyYWxccGFydGlnaHRlbmZhY3RvcjAKClxmMFxmczMyIFxjZjAgQ3JlYXRlZCBmb3Igc2VydmVyLXNpZGUgU3dpZnQuIFRoZSBzdGFuZGFyZCBvbiBMaW51eC4gV2lsbCBiZSBwb3J0ZWQgYW5kIGludGVncmF0ZWQgd2l0aCBYY29kZSBhbmQgZXZlbnR1YWxseSB3aWxsIHN1cGVyc2VkZSBDb2NvYVBvZHMufQEAAAAjAAAAAQAAAAcAAABUWFQucnRmEAAAAByWR1m2AQAAAAAAAAAAAAA=</rtfd>
 </item>
@@ -2045,12 +2046,12 @@ https://guides.cocoapods.org/using/using-cocoapods.html
 <attribute name="Modified" >2017-06-19T11:15:46+00:00</attribute>
 <attribute name="Name" >Linux</attribute>
 <attribute name="Searchable" >false</attribute>
-<attribute name="SelectionCount" >2</attribute>
+<attribute name="SelectionCount" >3</attribute>
 <attribute name="SortAlsoTransform" >normal</attribute>
 <attribute name="SortTransform" >normal</attribute>
 <attribute name="Width" >7.642084185</attribute>
-<attribute name="Xpos" >-5.460604651</attribute>
-<attribute name="Ypos" >-16.40589386</attribute>
+<attribute name="Xpos" >-5.346593652</attribute>
+<attribute name="Ypos" >-16.28622493</attribute>
 </adornment>
 <adornment ID="1497863776" Creator="Fernando Rodriguez" >
 <attribute name="Associates" ></attribute>
@@ -2111,10 +2112,10 @@ https://guides.cocoapods.org/using/using-cocoapods.html
 <attribute name="MapScrollY" >0.0078125</attribute>
 <attribute name="Modified" >2017-06-19T11:19:59+00:00</attribute>
 <attribute name="Name" >Bibliography</attribute>
-<attribute name="SelectionCount" >9</attribute>
+<attribute name="SelectionCount" >10</attribute>
 <attribute name="Width" >4.138826905</attribute>
-<attribute name="Xpos" >7.955515515</attribute>
-<attribute name="Ypos" >-13.36413809</attribute>
+<attribute name="Xpos" >8.408325195</attribute>
+<attribute name="Ypos" >-14.02478027</attribute>
 </item>
 <item ID="1498140248" Creator="Fernando Rodriguez" >
 <attribute name="Associates" ></attribute>
@@ -2614,10 +2615,9 @@ If you’re writing a framework and you want your code to be visible outside the
 <ExplodeDelimiter > </ExplodeDelimiter>
 </preferences>
 <windows >
-<window bounds="Rect[ 0 4 1920 1057]" ruler="0" >
+<window bounds="Rect[ -0 -0 1920 1057]" ruler="0" >
 <tabs >
-<tab selected="1" viewType="0" usingCheckboxes="0" showColumns="0" columnString="" scale="32" ID="1497792600" scrollX="695.547" scrollY="492.637" selection="1497793494 1497793531 " expanded="" textTab="0" attribute="" sortAttribute="" container="" query="" queryLabel="" action="" actionLabel="" bins="10" summaryAttribute="" summaryMethod="" splitRatio="0.450521" treemapExpression="" treemapColorExpression="" treemapBorderColorExpression="$Color" treemapColorStart="#fffef9100" treemapColorEnd="#ccd5bf100"  />
-<tab selected="0" viewType="1" usingCheckboxes="0" showColumns="0" columnString="" scale="32" ID="1497792600" scrollX="0" scrollY="0" selection="1502377550 " expanded="1502376208 1502376786 1502377332 1502377185 1497797018 1497800695 1498140248 1498935026 " textTab="0" attribute="" sortAttribute="" container="" query="" queryLabel="" action="" actionLabel="" bins="10" summaryAttribute="" summaryMethod="" splitRatio="0.5" treemapExpression="" treemapColorExpression="" treemapBorderColorExpression="$Color" treemapColorStart="#fffef9100" treemapColorEnd="#ccd5bf100"  />
+<tab selected="1" viewType="0" usingCheckboxes="0" showColumns="0" columnString="" scale="24.0941" ID="1497792600" scrollX="1184" scrollY="887" selection="1497800695 " expanded="" textTab="0" attribute="" sortAttribute="" container="" query="" queryLabel="" action="" actionLabel="" bins="10" summaryAttribute="" summaryMethod="" splitRatio="0.059375" treemapExpression="" treemapColorExpression="" treemapBorderColorExpression="$Color" treemapColorStart="#fffef9100" treemapColorEnd="#ccd5bf100"  />
 </tabs>
 </window>
 </windows>
