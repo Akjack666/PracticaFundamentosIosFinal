@@ -29,12 +29,13 @@ typealias Author = String
 let author: Author = "George R. R. Martin"
 let grr: String = "George R. R. Martin"
 
+type(of: author)
+
 
 // El símbolo anónimo
 // Cualquier cosa que asignes a ese símbolo, se va al garete
 let _ = "Robb Stark"
 let _ = "Stannis"
-
 // Tanto Stannis como Robb se han muerto
 
 // Intro a funciones

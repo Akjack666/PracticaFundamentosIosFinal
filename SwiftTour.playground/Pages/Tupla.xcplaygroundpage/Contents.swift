@@ -9,6 +9,7 @@ import Foundation
  - Struct
  - Class
  - Enum
+ - (Protocols) 2º dan 
  
  */
 
@@ -18,6 +19,7 @@ var httpResponse = ("OK", 200)
 // Las tuplas tienen tipo. En este caso es de tipo (String, Int)
 
 httpResponse = ("Internal server error", 500)
+
 
 // Acceso a los valores de la tupla
 // Se accede por posición
