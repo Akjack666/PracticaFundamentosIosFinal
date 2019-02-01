@@ -115,9 +115,32 @@ var got: Book?
 
 got = nil
 got = book
-got = nil
+//got = nil
 
+// Si te encuentras un nil, la aplicación explota, hace crash, etc...
 
+// Cómo podemos obtener el valor?
+// 3 formas
+
+// 1º. Force-Unwrap: ! (despempaquetado por cojones)
+//print(got!)
+// No es recomendable. No hay que hacerlo (casi) nunca.
+
+// 2º. if let
+if let theBook = got {
+    print(theBook)
+}
+// Esta SÍ es una buena forma de desempaquetar un Optional
+
+// 3º. guard let
+// es como if-let pero la variable que creas existe fuera del scope
+
+// Si got no tiene un valor, entonces entras en lo de las llaves, si no, sigues hacia delante
+guard let theBook = got else {
+    continue
+}
+
+print(theBook)
 
 
 
