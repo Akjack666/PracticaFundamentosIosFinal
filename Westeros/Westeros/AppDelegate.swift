@@ -21,8 +21,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         window?.backgroundColor = .red
         
-        let rootViewController = UIViewController()
-        window?.rootViewController = rootViewController
+        // Crearnos los modelos
+        let houses = Repository.local.houses
+        
+        // Creamos los controladores
+        var controllers = [UIViewController]()
+        
+        for eachHouse in houses {
+            controllers.append(HouseDetailViewController(model: eachHouse).wrappedInNavigation())
+        }
+        
+        // Crear el combinador
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = controllers
+        
+        // Asignamos el rootViewController del window
+        window?.rootViewController = tabBarController
         
         return true
     }

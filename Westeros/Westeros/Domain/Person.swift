@@ -27,3 +27,31 @@ final class Person {
         self.house = house
     }
 }
+
+extension Person {
+    var fullName: String {
+        return "\(name) \(house.name)"
+    }
+}
+
+extension Person {
+    var proxy: String {
+        return "\(name) \(alias) \(house.name)"
+    }
+}
+
+// Si dos objetos tienen el mismo hash, significa que tienen que ser iguales
+// A la inversa no es necesariamente cierta: 2 objecos puedes ser iguales y no tener el mismo hash
+extension Person: Hashable { // Identidad
+    // Con proxy, le pasamos el marrón de calcular el hash u otra cosa a otro objeto
+    var hashValue: Int {
+        return proxy.hashValue
+    }
+}
+
+extension Person: Equatable {
+    static func == (lhs: Person, rhs: Person) -> Bool {
+        return lhs.proxy == rhs.proxy
+    }
+}
+

@@ -11,6 +11,8 @@ import XCTest
 
 class PersonTests: XCTestCase {
 
+    var ned: Person!
+    var arya: Person!
     var starkHouse: House!
     var starkSigil: Sigil!
     // 1- Le damos un valor por defecto
@@ -19,6 +21,8 @@ class PersonTests: XCTestCase {
     override func setUp() {
         starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
         starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno")
+        ned = Person(name: "Eddard", alias: "Ned", house: starkHouse)
+        arya = Person(name: "Arya", house: starkHouse)
     }
 
     override func tearDown() {
@@ -26,11 +30,27 @@ class PersonTests: XCTestCase {
     }
 
     func testPersonExistence() {
-        let character = Person(name: "Eddard", alias: "Ned", house: starkHouse)
-        XCTAssertNotNil(character)
+        XCTAssertNotNil(ned)
     }
     
     func testPersonHasFullName() {
         XCTAssertEqual(ned.fullName, "Eddard Stark")
+    }
+    
+    // given - when - then
+    func testPersonHashable() {
+        XCTAssertNotNil(ned.hashValue)
+    }
+    
+    func testPersonEquality() {
+        // Identidad
+        XCTAssertEqual(ned, ned)
+        
+        // Igualdad
+        let eddard = Person(name: "Eddard", alias: "Ned", house: starkHouse)
+        XCTAssertEqual(eddard, ned)
+        
+        // Desigualdad
+        XCTAssertNotEqual(ned, arya)
     }
 }
