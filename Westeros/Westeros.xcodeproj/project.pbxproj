@@ -15,6 +15,8 @@
 		AC6162712208FF0500EC1FD1 /* UIViewController+Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6162702208FF0500EC1FD1 /* UIViewController+Navigation.swift */; };
 		AC616273220B703B00EC1FD1 /* RepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC616272220B703B00EC1FD1 /* RepositoryTests.swift */; };
 		AC616278220B714100EC1FD1 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC616277220B714100EC1FD1 /* Repository.swift */; };
+		AC61627B220B9F9C00EC1FD1 /* WikiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC616279220B9F9C00EC1FD1 /* WikiViewController.swift */; };
+		AC61627C220B9F9C00EC1FD1 /* WikiViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC61627A220B9F9C00EC1FD1 /* WikiViewController.xib */; };
 		AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6E680B2203929E00EB0430 /* AppDelegate.swift */; };
 		AC6E68132203929F00EB0430 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC6E68122203929F00EB0430 /* Assets.xcassets */; };
 		AC6E68162203929F00EB0430 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC6E68142203929F00EB0430 /* LaunchScreen.storyboard */; };
@@ -44,6 +46,8 @@
 		AC6162702208FF0500EC1FD1 /* UIViewController+Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Navigation.swift"; sourceTree = "<group>"; };
 		AC616272220B703B00EC1FD1 /* RepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryTests.swift; sourceTree = "<group>"; };
 		AC616277220B714100EC1FD1 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		AC616279220B9F9C00EC1FD1 /* WikiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiViewController.swift; sourceTree = "<group>"; };
+		AC61627A220B9F9C00EC1FD1 /* WikiViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WikiViewController.xib; sourceTree = "<group>"; };
 		AC6E68082203929E00EB0430 /* Westeros.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Westeros.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC6E680B2203929E00EB0430 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC6E68122203929F00EB0430 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +85,8 @@
 			children = (
 				AC6162642208EA4D00EC1FD1 /* HouseDetailViewController.swift */,
 				AC6162652208EA4D00EC1FD1 /* HouseDetailViewController.xib */,
+				AC616279220B9F9C00EC1FD1 /* WikiViewController.swift */,
+				AC61627A220B9F9C00EC1FD1 /* WikiViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -249,6 +255,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC61626D2208F2BC00EC1FD1 /* lannister.jpg in Resources */,
+				AC61627C220B9F9C00EC1FD1 /* WikiViewController.xib in Resources */,
 				AC6E68162203929F00EB0430 /* LaunchScreen.storyboard in Resources */,
 				AC61626C2208F2BC00EC1FD1 /* targaryenSmall.jpg in Resources */,
 				AC6E68132203929F00EB0430 /* Assets.xcassets in Resources */,
@@ -277,6 +284,7 @@
 				AC6E68312203A6DA00EB0430 /* Sigil.swift in Sources */,
 				AC6E682F22039E3000EB0430 /* House.swift in Sources */,
 				AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */,
+				AC61627B220B9F9C00EC1FD1 /* WikiViewController.swift in Sources */,
 				AC6E68362203A9B200EB0430 /* Person.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

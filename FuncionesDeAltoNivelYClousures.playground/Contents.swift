@@ -160,5 +160,7 @@ let resultado =
 
 resultado
 
-
-
+// REDUCE
+// Reduce todos los elementos de una colección aplicando una operación
+let r = numeros.reduce(1) { $0 + $1 }
+r
