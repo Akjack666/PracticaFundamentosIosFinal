@@ -35,8 +35,12 @@ extension Person {
 }
 
 extension Person {
-    var proxy: String {
+    var proxyForEquality: String {
         return "\(name) \(alias) \(house.name)"
+    }
+    
+    var proxyForComparison: String {
+        return fullName
     }
 }
 
@@ -45,13 +49,18 @@ extension Person {
 extension Person: Hashable { // Identidad
     // Con proxy, le pasamos el marrón de calcular el hash u otra cosa a otro objeto
     var hashValue: Int {
-        return proxy.hashValue
+        return proxyForEquality.hashValue
     }
 }
 
 extension Person: Equatable {
     static func == (lhs: Person, rhs: Person) -> Bool {
-        return lhs.proxy == rhs.proxy
+        return lhs.proxyForEquality == rhs.proxyForEquality
     }
 }
 
+extension Person: Comparable {
+    static func < (lhs: Person, rhs: Person) -> Bool {
+        return lhs.proxyForComparison < rhs.proxyForComparison
+    }
+}

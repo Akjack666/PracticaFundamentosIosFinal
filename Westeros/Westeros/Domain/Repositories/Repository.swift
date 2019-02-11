@@ -60,5 +60,4 @@ final class LocalFactory: HouseFactory {
     func houses(filteredBy theFilter: (House) -> Bool) -> [House] {
         return houses.filter(theFilter)
     }
-    
 }
