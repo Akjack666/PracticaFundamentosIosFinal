@@ -16,7 +16,7 @@ class WikiViewController: UIViewController {
     @IBOutlet weak var loadingView: UIActivityIndicatorView!
     
     // MARK: Properties
-    let model: House
+    var model: House
     
     // MARK: Initialization
     init(model: House) {
@@ -35,6 +35,26 @@ class WikiViewController: UIViewController {
         syncModelWithView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Nos damos de alta en las notificaciones
+        // Tan pronto como te des de alta, implementa el código para darte de baja. Si no, te olvidarás
+        let notificationCenter = NotificationCenter.default
+        let name = Notification.Name(HOUSE_DID_CHANGE_NOTIFICATION_NAME)
+        
+        notificationCenter.addObserver(self,
+                                       selector: #selector(houseDidChange(notification:)),
+                                       name: name,
+                                       object: nil) // Object es quien manda la notific
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Nos damos de baja en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
     func syncModelWithView() {
         // Mostramos el loadingView
         loadingView.isHidden = false
@@ -44,6 +64,21 @@ class WikiViewController: UIViewController {
         title = model.name
         let request = URLRequest(url: model.wikiURL)
         webView.load(request)
+    }
+    
+    // MARK: Notification
+    @objc func houseDidChange(notification: Notification) {
+        // Sacar el userInfo de la noti, y la casa del userInfo
+        guard let info = notification.userInfo,
+            let house = info[HOUSE_KEY] as? House else {
+            return
+        }
+        
+        // Actualizar mi modelo
+        model = house
+        
+        // Sincronizar modelo y vista
+        syncModelWithView()
     }
 }
 

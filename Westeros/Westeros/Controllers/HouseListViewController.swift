@@ -8,10 +8,19 @@
 
 import UIKit
 
+// Definir nuestro propio delegado
+protocol HouseListViewControllerDelegate {
+    // Should
+    // Will
+    // Did
+    func houseListViewController(_ viewController: HouseListViewController, didSelectHouse: House)
+}
+
 class HouseListViewController: UITableViewController {
     
     // MARK: Properties
     let model: [House]
+    var delegate: HouseListViewControllerDelegate?
     
     // MARK: Initialization
     init(model: [House]) {
@@ -54,21 +63,57 @@ class HouseListViewController: UITableViewController {
         return cell!
     }
     
-    // MARK: UITableView Delegate
+    // MARK: UITableViewDelegate
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 90
     }
     
-
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         // Averiguar la casa que se ha pulsado
         let house = model[indexPath.row]
         
-        // Crear el controlador de detalle de esa casa
-        let houseDetailViewController = HouseDetailViewController(model: house)
+        // Avisar al delegado
+        // Quien quiera, que se conforme al HouseListViewControllerDelegate para hacer lo que tenga que hacer
+        delegate?.houseListViewController(self, didSelectHouse: house)
         
-        // Vamos a mostrarlo (push)
-        navigationController?.pushViewController(houseDetailViewController, animated: true)
+        // Emitir la misma info por notificaciones
+        let notificationCenter = NotificationCenter.default
+        // Creamos la notificación
+        let notification = Notification(name: Notification.Name(HOUSE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [HOUSE_KEY: house])
+        
+        // Enviamos la notificación
+        notificationCenter.post(notification)
+        
+        // Guardar la casa seleccionada
+        saveLastSelectedHouse(at: indexPath.row)
+    }
+}
+
+extension HouseListViewController {
+    func saveLastSelectedHouse(at index: Int) {
+        // UserDefaults será nuestro motor de persistencia
+        let userDefaults = UserDefaults.standard
+        
+        // Escribimos el index en una key de nuestro motor de persistencia
+        userDefaults.set(index, forKey: LAST_HOUSE_KEY)
+        
+        // Guardamos
+        userDefaults.synchronize() // Por si acaso (save)
+    }
+    
+    func lastSelectedHouse() -> House {
+        // UserDefaults
+        let userDefaults = UserDefaults.standard
+        
+        // Leemos de nuestro motor de persistencia
+        let index = userDefaults.integer(forKey: LAST_HOUSE_KEY) // 0 es default
+        
+        // Devolvemos la casa situada en el index
+        return house(at: index)
+    }
+    
+    func house(at index: Int) -> House {
+        return model[index]
     }
 }

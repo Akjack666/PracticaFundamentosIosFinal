@@ -16,7 +16,7 @@ class HouseDetailViewController: UIViewController {
     @IBOutlet weak var wordsLabel: UILabel!
     
     // MARK: Properties
-    let model: House
+    var model: House
     
     // MARK: Initialization
     init(model: House) {
@@ -72,5 +72,15 @@ class HouseDetailViewController: UIViewController {
         
         // Hacemos push
         navigationController?.pushViewController(wikiViewController, animated: true)
+    }
+}
+
+extension HouseDetailViewController: HouseListViewControllerDelegate {
+    func houseListViewController(_ viewController: HouseListViewController, didSelectHouse house: House) {
+        // Re-asigna el modelo
+        self.model = house
+        
+        // Sincroniza modelo (el nuevo) con la vista
+        syncModelWithView()
     }
 }
