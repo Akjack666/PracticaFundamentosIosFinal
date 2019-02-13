@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		453B2ADF221443F800F7DB28 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2ADE221443F800F7DB28 /* Season.swift */; };
+		453B2AE1221444F900F7DB28 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE0221444F900F7DB28 /* Episode.swift */; };
+		453B2AE52214871000F7DB28 /* EpisodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE42214871000F7DB28 /* EpisodeTest.swift */; };
+		453B2AE72214872000F7DB28 /* SeasonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE62214872000F7DB28 /* SeasonTest.swift */; };
 		AC2B75FB2212226B00014F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B75FA2212226B00014F4B /* Constants.swift */; };
 		AC6162662208EA4D00EC1FD1 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6162642208EA4D00EC1FD1 /* HouseDetailViewController.swift */; };
 		AC6162672208EA4D00EC1FD1 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6162652208EA4D00EC1FD1 /* HouseDetailViewController.xib */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		453B2ADE221443F800F7DB28 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
+		453B2AE0221444F900F7DB28 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
+		453B2AE42214871000F7DB28 /* EpisodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTest.swift; sourceTree = "<group>"; };
+		453B2AE62214872000F7DB28 /* SeasonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonTest.swift; sourceTree = "<group>"; };
 		AC2B75FA2212226B00014F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC6162642208EA4D00EC1FD1 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		AC6162652208EA4D00EC1FD1 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
@@ -172,6 +180,8 @@
 				AC6E682B22039C3900EB0430 /* HouseTests.swift */,
 				AC6E68322203A8A500EB0430 /* PersonTests.swift */,
 				AC616272220B703B00EC1FD1 /* RepositoryTests.swift */,
+				453B2AE42214871000F7DB28 /* EpisodeTest.swift */,
+				453B2AE62214872000F7DB28 /* SeasonTest.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -183,6 +193,8 @@
 				AC6E682E22039E3000EB0430 /* House.swift */,
 				AC6E68302203A6DA00EB0430 /* Sigil.swift */,
 				AC6E68352203A9B200EB0430 /* Person.swift */,
+				453B2ADE221443F800F7DB28 /* Season.swift */,
+				453B2AE0221444F900F7DB28 /* Episode.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -299,8 +311,10 @@
 				AC2B75FB2212226B00014F4B /* Constants.swift in Sources */,
 				AC6162712208FF0500EC1FD1 /* UIViewController+Navigation.swift in Sources */,
 				AC6162662208EA4D00EC1FD1 /* HouseDetailViewController.swift in Sources */,
+				453B2ADF221443F800F7DB28 /* Season.swift in Sources */,
 				AC6E68312203A6DA00EB0430 /* Sigil.swift in Sources */,
 				AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */,
+				453B2AE1221444F900F7DB28 /* Episode.swift in Sources */,
 				AC6E682F22039E3000EB0430 /* House.swift in Sources */,
 				AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */,
 				AC61627B220B9F9C00EC1FD1 /* WikiViewController.swift in Sources */,
@@ -314,8 +328,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC6E682C22039C3900EB0430 /* HouseTests.swift in Sources */,
+				453B2AE52214871000F7DB28 /* EpisodeTest.swift in Sources */,
 				AC6E68332203A8A500EB0430 /* PersonTests.swift in Sources */,
 				AC616273220B703B00EC1FD1 /* RepositoryTests.swift in Sources */,
+				453B2AE72214872000F7DB28 /* SeasonTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
