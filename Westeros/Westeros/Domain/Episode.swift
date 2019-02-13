@@ -9,20 +9,35 @@
 import Foundation
 
 
+
+
 final class Episode {
     
     
     // Propiedades
     
-    weak var season: Season? // Asumimos que puede haber episodios que no pertenezcan a una temporada
+    weak var _season: Season? // Asumimos que puede haber episodios que no pertenezcan a una temporada
     var titulo: String
     var fecha: Date
     
+    
+    /*
+    // propiedades computada
+    var season: Season {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
+
+        return _season ?? Season(episodios: [], nombre: "No pertenece a una temporada", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+    }
+   */
+    
     // Inicializacion
     
-    init(titulo: String, fecha: Date) {
+    init(titulo: String, fecha: Date, season: Season? = nil) {
         self.titulo = titulo
         self.fecha = fecha
+        _season = season
     }
     
 }
@@ -71,7 +86,7 @@ extension Episode: Comparable {
 
 extension Episode: CustomStringConvertible {
     var description: String {
-        return "El episodio \(titulo) se lanzo en \(fecha) y pertenece a la temporada \(season!.nombre)"
+        return "El episodio \(titulo) se lanzo en \(fecha) y pertenece a la temporada \(String(describing: _season?.nombre))"
     }
 }
 

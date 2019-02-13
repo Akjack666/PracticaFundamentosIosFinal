@@ -9,22 +9,26 @@
 import Foundation
 
 
+typealias Episodes = Set<Episode>
+
 final class Season {
     
     
     // Propiedades
     
-    var episodios: [Episode]  // no puede estar vacio, una temporada tiene que tener minimo un episodio
+     // no puede estar vacio, una temporada tiene que tener minimo un episodio
     var nombre: String
     var fecha_lanzamiento: Date
+    private var _episodes: Episodes
+    
     
     
     //Inicializacion
     
-    init(episodios: [Episode], nombre: String, fecha_lanzamiento: Date) {
-        self.episodios = episodios
+    init(nombre: String, fecha_lanzamiento: Date) {
         self.nombre = nombre
         self.fecha_lanzamiento = fecha_lanzamiento
+        _episodes = Episodes()
     }
     
     
@@ -73,7 +77,7 @@ extension Season: Comparable {
 
 extension Season: CustomStringConvertible {
     var description: String {
-        return "La temporada \(nombre) se lanzo en \(fecha_lanzamiento) con \(episodios.count) episodios"
+        return "La temporada \(nombre) se lanzo en \(fecha_lanzamiento) con \(_episodes.count) episodios"
     }
 }
 
@@ -83,7 +87,7 @@ extension Season: CustomStringConvertible {
 
 extension Season {
     var count: Int {
-        return episodios.count
+        return _episodes.count
     }
 }
 

@@ -11,10 +11,27 @@ import XCTest
 
 class EpisodeTest: XCTestCase {
     
-    var episodioPrueba: Episode!
+    var episodioUno: Episode!
+    var seasonOne: Season!
 
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+       
+        
+        // Formato para las fechas
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
+       
+        
+       
+        
+        //Primer episodio
+        episodioUno = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        
+       
+        //Primera temporada
+        
+        seasonOne = Season(nombre: "Cancion de hielo y fuego", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
         
         
     }
@@ -23,16 +40,14 @@ class EpisodeTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testEpisodeExist() {
+        XCTAssertNotNil(episodioUno)
     }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    
+    func testSeasonExist() {
+        XCTAssertNotNil(seasonOne)
     }
+    
+    
 
 }
