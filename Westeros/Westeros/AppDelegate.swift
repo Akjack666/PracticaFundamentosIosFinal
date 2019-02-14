@@ -23,30 +23,43 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         // Crearnos los modelos
         let houses = Repository.local.houses
+        let seasons = Repository.local.seasons
         
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
         let houseListViewController = HouseListViewController(model: houses)
+       let seasonListViewController = SeasonListViewController(model: seasons)
+        
         
         // Recuperar la última casa seleccionada (si hay alguna)
         let lastHouseSelected = houseListViewController.lastSelectedHouse()
         
         let houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
+        let seasonDetailViewController = SeasonDetailViewController(model: seasons[1])
         
         // Asigar delegados
         // Un objeto SOLO PUEDE TENER UN DELEGADO
         // Un objeto, puede ser delegado de muchos otros objetos
         houseListViewController.delegate = houseDetailViewController
+       
+        
+        
         
         // Creamos el split view controller y asignamos los controladores
         let splitViewController = UISplitViewController()
         splitViewController.viewControllers = [
-            houseListViewController.wrappedInNavigation(),
-            houseDetailViewController.wrappedInNavigation()
+           // houseListViewController.wrappedInNavigation(),
+         //  houseDetailViewController.wrappedInNavigation(),
+            seasonDetailViewController.wrappedInNavigation()
+            
+       //   seasonListViewController.wrappedInNavigation()
+           
         ]
         
         
         // Asignamos el rootViewController del window
         window?.rootViewController = splitViewController
+        
+        
         
         return true
     }

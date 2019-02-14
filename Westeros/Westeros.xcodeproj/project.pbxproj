@@ -11,6 +11,10 @@
 		453B2AE1221444F900F7DB28 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE0221444F900F7DB28 /* Episode.swift */; };
 		453B2AE52214871000F7DB28 /* EpisodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE42214871000F7DB28 /* EpisodeTest.swift */; };
 		453B2AE72214872000F7DB28 /* SeasonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE62214872000F7DB28 /* SeasonTest.swift */; };
+		45526F4522159596007DDB27 /* SeasonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45526F4322159596007DDB27 /* SeasonListViewController.swift */; };
+		45526F4622159596007DDB27 /* SeasonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45526F4422159596007DDB27 /* SeasonListViewController.xib */; };
+		45526F4922159B6A007DDB27 /* SeasonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */; };
+		45526F4A22159B6A007DDB27 /* SeasonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45526F4822159B6A007DDB27 /* SeasonDetailViewController.xib */; };
 		AC2B75FB2212226B00014F4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2B75FA2212226B00014F4B /* Constants.swift */; };
 		AC6162662208EA4D00EC1FD1 /* HouseDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC6162642208EA4D00EC1FD1 /* HouseDetailViewController.swift */; };
 		AC6162672208EA4D00EC1FD1 /* HouseDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC6162652208EA4D00EC1FD1 /* HouseDetailViewController.xib */; };
@@ -51,6 +55,10 @@
 		453B2AE0221444F900F7DB28 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		453B2AE42214871000F7DB28 /* EpisodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTest.swift; sourceTree = "<group>"; };
 		453B2AE62214872000F7DB28 /* SeasonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonTest.swift; sourceTree = "<group>"; };
+		45526F4322159596007DDB27 /* SeasonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewController.swift; sourceTree = "<group>"; };
+		45526F4422159596007DDB27 /* SeasonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonListViewController.xib; sourceTree = "<group>"; };
+		45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetailViewController.swift; sourceTree = "<group>"; };
+		45526F4822159B6A007DDB27 /* SeasonDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonDetailViewController.xib; sourceTree = "<group>"; };
 		AC2B75FA2212226B00014F4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AC6162642208EA4D00EC1FD1 /* HouseDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HouseDetailViewController.swift; sourceTree = "<group>"; };
 		AC6162652208EA4D00EC1FD1 /* HouseDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseDetailViewController.xib; sourceTree = "<group>"; };
@@ -109,6 +117,10 @@
 				AC95EB80220CCDB80021E69D /* HouseListViewController.xib */,
 				AC95EB83220CE5EA0021E69D /* MemberListViewController.swift */,
 				AC95EB84220CE5EA0021E69D /* MemberListViewController.xib */,
+				45526F4322159596007DDB27 /* SeasonListViewController.swift */,
+				45526F4422159596007DDB27 /* SeasonListViewController.xib */,
+				45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */,
+				45526F4822159B6A007DDB27 /* SeasonDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -283,9 +295,11 @@
 			files = (
 				AC61626D2208F2BC00EC1FD1 /* lannister.jpg in Resources */,
 				AC61627C220B9F9C00EC1FD1 /* WikiViewController.xib in Resources */,
+				45526F4A22159B6A007DDB27 /* SeasonDetailViewController.xib in Resources */,
 				AC6E68162203929F00EB0430 /* LaunchScreen.storyboard in Resources */,
 				AC95EB82220CCDB80021E69D /* HouseListViewController.xib in Resources */,
 				AC95EB86220CE5EA0021E69D /* MemberListViewController.xib in Resources */,
+				45526F4622159596007DDB27 /* SeasonListViewController.xib in Resources */,
 				AC61626C2208F2BC00EC1FD1 /* targaryenSmall.jpg in Resources */,
 				AC6E68132203929F00EB0430 /* Assets.xcassets in Resources */,
 				AC6162672208EA4D00EC1FD1 /* HouseDetailViewController.xib in Resources */,
@@ -312,8 +326,10 @@
 				AC6162712208FF0500EC1FD1 /* UIViewController+Navigation.swift in Sources */,
 				AC6162662208EA4D00EC1FD1 /* HouseDetailViewController.swift in Sources */,
 				453B2ADF221443F800F7DB28 /* Season.swift in Sources */,
+				45526F4522159596007DDB27 /* SeasonListViewController.swift in Sources */,
 				AC6E68312203A6DA00EB0430 /* Sigil.swift in Sources */,
 				AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */,
+				45526F4922159B6A007DDB27 /* SeasonDetailViewController.swift in Sources */,
 				453B2AE1221444F900F7DB28 /* Episode.swift in Sources */,
 				AC6E682F22039E3000EB0430 /* House.swift in Sources */,
 				AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */,
@@ -479,7 +495,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DEVELOPMENT_TEAM = 9YX58HJKKT;
 				INFOPLIST_FILE = Westeros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -499,7 +515,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 8LNA9LB2Y8;
+				DEVELOPMENT_TEAM = 9YX58HJKKT;
 				INFOPLIST_FILE = Westeros/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

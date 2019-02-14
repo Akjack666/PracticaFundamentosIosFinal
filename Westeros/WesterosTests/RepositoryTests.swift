@@ -66,7 +66,8 @@ class RepositoryTests: XCTestCase {
         XCTAssertNotNil(seasonOne)
         XCTAssertEqual(seasonOne?.nombre, "Season 1")
         
-        
+        let keepcodig = Repository.local.season(named: "Keepcoding")
+        XCTAssertNil(keepcodig)
     }
     
     
