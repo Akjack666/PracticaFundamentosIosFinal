@@ -19,7 +19,7 @@ final class Season {
      // no puede estar vacio, una temporada tiene que tener minimo un episodio
     var nombre: String
     var fecha_lanzamiento: Date
-    private var _episodes: Episodes
+    public var _episodes: Episodes
     
     
     
@@ -89,6 +89,23 @@ extension Season {
     var count: Int {
         return _episodes.count
     }
+    
+    
+    var sortedEpisodes: [Episode] {
+        return _episodes.sorted()
+    }
+    
+    
+    /*
+    func add(episode: Episode) {
+        guard episode._season?.nombre == nombre else { return }
+        _episodes.insert(episode)
+    }
+    
+    func add(episodes: Episode...) {
+        episodes.forEach { add(episode: $0) }
+    }
+    */
 }
 
 

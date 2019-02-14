@@ -19,7 +19,22 @@ protocol HouseFactory {
     func houses(filteredBy filter: HouseFilter) -> [House]
 }
 
+
+protocol SeasonsFactory {
+    typealias SeasonFilter = (Season) -> Bool
+    var seasons: [Season] { get } // sólo get porque será de sólo lectura
+    func season(named: String) -> Season?
+    func seasons(filteredBy filter: SeasonFilter) -> [Season]
+}
+
+
+
+
 final class LocalFactory: HouseFactory {
+    
+    
+  
+    
 
     var houses: [House] {
         // Creación de casas
@@ -61,3 +76,11 @@ final class LocalFactory: HouseFactory {
         return houses.filter(theFilter)
     }
 }
+
+
+
+
+
+
+
+

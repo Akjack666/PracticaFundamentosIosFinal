@@ -12,7 +12,12 @@ import XCTest
 class EpisodeTest: XCTestCase {
     
     var episodioUno: Episode!
+    var episodio1: Episode!
+    var episodioDos: Episode!
+    
     var seasonOne: Season!
+    var season1: Season!
+    var seasonTwo: Season!
 
     override func setUp() {
        
@@ -25,13 +30,20 @@ class EpisodeTest: XCTestCase {
         
        
         
-        //Primer episodio
+        //Episodios
         episodioUno = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        episodio1 = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
+
+        episodioDos = Episode(titulo: "The Kingsroad", fecha: formatter.date(from: "2011/04/24")!, season: seasonOne)
         
        
         //Primera temporada
         
         seasonOne = Season(nombre: "Cancion de hielo y fuego", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+        season1 = Season(nombre: "Cancion de hielo y fuego", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+        
+        
+        seasonTwo = Season(nombre: "Choque de reyes", fecha_lanzamiento: formatter.date(from: "2012/04/01")!)
         
         
     }
@@ -48,6 +60,87 @@ class EpisodeTest: XCTestCase {
         XCTAssertNotNil(seasonOne)
     }
     
+    func testSeasonAddEpisode() {
+        XCTAssertEqual(seasonOne.count, 0)
+        
+        seasonOne._episodes.insert(episodioUno)
+      //  seasonOne.add(episode: episodioUno)
+        
+        XCTAssertEqual(seasonOne.count, 1)
+        
+        seasonOne._episodes.insert(episodioDos)
+        //seasonOne.add(episode: episodioDos)
+        XCTAssertEqual(seasonOne.count, 2)
+        
+    }
     
+    func testEpisodeHashable() {
+        
+        XCTAssertNotNil(episodioUno.hashValue)
+    }
+    
+    func testSeasonHashable() {
+        
+        XCTAssertNotNil(seasonOne.hashValue)
+    }
+    
+    func testEpisodeEquality() {
+        
+        // Identidad
+        
+        XCTAssertEqual(episodioUno, episodioUno)
+        
+        // Igualdad
+        
+        
+        XCTAssertEqual(episodio1, episodioUno)
+        
+        // Desiagualdad
+        
+        
+        XCTAssertNotEqual(episodio1, episodioDos)
+        
+        
+    }
+    
+    func testSeasonEquality() {
+        
+        // Identidad
+        
+        XCTAssertEqual(seasonOne, seasonOne)
+        
+        // Igualdad
+        
+        
+        XCTAssertEqual(season1, seasonOne)
+        
+        // Desiagualdad
+        
+        
+        XCTAssertNotEqual(seasonOne, seasonTwo)
+        
+        
+    }
+    
+    
+    func testEpisodeComparison() {
+        XCTAssertLessThan(episodioDos, episodioUno)
+    }
+    
+    func testSeasonComparison() {
+        
+        XCTAssertLessThan(seasonOne, seasonTwo)
+    }
+    
+    
+    
+    
+    func testHouse_SortedEpisodes_ReturnsAnArrayOfSortedEpisodes() {
+        // [1 , 5 , 4] -> .sorted() -> [1, 4, 5]
+        // [1 , 2, 3 , 4] -> .sorted() -> [1, 2, 3, 4]
+        XCTAssertEqual(season1.sortedEpisodes, season1.sortedEpisodes.sorted())
+    }
+    
+ 
 
 }
