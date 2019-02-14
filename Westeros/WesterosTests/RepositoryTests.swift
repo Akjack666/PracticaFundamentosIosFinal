@@ -11,9 +11,11 @@ import XCTest
 class RepositoryTests: XCTestCase {
 
     var houses: [House]!
+    var seasons: [Season]!
     
     override func setUp() {
         houses = Repository.local.houses
+        seasons = Repository.local.seasons
     }
 
     override func tearDown() {
@@ -28,12 +30,24 @@ class RepositoryTests: XCTestCase {
         XCTAssertNotNil(houses)
     }
     
+    func testLocalRepositorySeasonsExistence() {
+        XCTAssertNotNil(seasons)
+    }
+    
     func testLocalRepository_HouseCount() {
         XCTAssertEqual(houses.count, 3)
+    }
+    
+    func testLocalRepository_SeasonCount() {
+        XCTAssertEqual(seasons.count, 7)
     }
 
     func testLocalRepository_ReturnsSortedArrayOfHouses() {
         XCTAssertEqual(houses, houses.sorted())
+    }
+    
+    func testLocalRepository_ReturnsSortedArrayOfSeasons() {
+        XCTAssertEqual(seasons, seasons.sorted())
     }
     
     func testLocalRepositoryReturnsHousesByNameCaseInsensitively() {
@@ -45,6 +59,17 @@ class RepositoryTests: XCTestCase {
         XCTAssertNil(keepcodig)
     }
     
+    
+    
+    func testLocalRepositoryReturnsSeasonsByNameCaseInsensitively() {
+        let seasonOne = Repository.local.season(named: "SeAsOn 1")
+        XCTAssertNotNil(seasonOne)
+        XCTAssertEqual(seasonOne?.nombre, "Season 1")
+        
+        
+    }
+    
+    
     // given-when-then
     func testLocalRepository_HousesFilteredBy_ReturnsTheCorrectValue() {
 //        let filtered = Repository.local.houses {
@@ -53,5 +78,16 @@ class RepositoryTests: XCTestCase {
         let filtered = Repository.local.houses(filteredBy: { $0.count == 1 })
 
         XCTAssertEqual(filtered.count, 1)
+    }
+    
+    
+    func testLocalRepository_SeasonsFilteredBy_ReturnsTheCorrectValue() {
+        
+        
+        // Filtramos las temporadas que tendran 2 capitulos, que nos dara como resultado 7
+        
+        let filtered = Repository.local.seasons(filteredBy: { $0.count == 2 })
+        
+        XCTAssertEqual(filtered.count, 7)
     }
 }

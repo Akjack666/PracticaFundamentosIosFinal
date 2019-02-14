@@ -95,8 +95,6 @@ extension Season {
         return _episodes.sorted()
     }
     
-    
-    /*
     func add(episode: Episode) {
         guard episode._season?.nombre == nombre else { return }
         _episodes.insert(episode)
@@ -105,7 +103,7 @@ extension Season {
     func add(episodes: Episode...) {
         episodes.forEach { add(episode: $0) }
     }
-    */
+ 
 }
 
 
