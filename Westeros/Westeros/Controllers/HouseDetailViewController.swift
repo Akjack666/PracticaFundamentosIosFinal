@@ -33,11 +33,7 @@ class HouseDetailViewController: UIViewController {
     }
     
     // MARK: - Life Cycle
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        syncModelWithView()
-        setupUI()
-    }
+     
     
     // MARK: Sync
     func syncModelWithView() {

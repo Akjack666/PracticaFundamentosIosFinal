@@ -14,7 +14,7 @@ class SeasonDetailViewController: UIViewController  {
     @IBOutlet weak var dateSeason: UILabel!
     @IBOutlet weak var episodesList: UITableView!
     
-    let model: Season
+    var model: Season
     
     init(model: Season) {
         self.model = model
@@ -35,13 +35,13 @@ class SeasonDetailViewController: UIViewController  {
         // Do any additional setup after loading the view.
         
         episodesList.dataSource = self
-      //  episodesList.delegate = self as! UITableViewDelegate
+       // episodesList.delegate = self
     }
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        syncModelWithView()
+    //    syncModelWithView()
        // setupUI()
     }
     
@@ -50,11 +50,11 @@ class SeasonDetailViewController: UIViewController  {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        
-        
+        print("Desde aqui \(model)")
         tittleSeason.text = model.nombre
-        
         dateSeason.text = "Se estreno el  \(dateFormatter.string(from: model.fecha_lanzamiento))"
+        episodesList.dataSource = self
+        
 
     }
     
@@ -88,6 +88,18 @@ extension SeasonDetailViewController: UITableViewDataSource {
     }
     
     }
+
+
+extension SeasonDetailViewController: SeasonListViewControllerDelegate {
+    func seasonListViewController(_ viewController: SeasonListViewController, didSelectSeason season: Season) {
+        // Re-asigna el modelo
+        self.model = season
+        
+        // Sincroniza modelo (el nuevo) con la vista
+        syncModelWithView()
+    }
+}
+
 
 
 

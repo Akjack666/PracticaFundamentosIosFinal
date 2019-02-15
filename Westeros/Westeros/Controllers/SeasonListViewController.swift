@@ -13,19 +13,19 @@ protocol SeasonListViewControllerDelegate {
     // Should
     // Will
     // Did
-    func houseListViewController(_ viewController: SeasonListViewController, didSelectHouse: Season)
+    func seasonListViewController(_ viewController: SeasonListViewController, didSelectSeason: Season)
 }
 
 
 
-class SeasonListViewController: UIViewController {
+class SeasonListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var SeasonTable: UITableView!
     
     // Propiedades
     
     let model: [Season]
-    var delegate: HouseListViewControllerDelegate?
+    var delegate: SeasonListViewControllerDelegate?
     
     init(model: [Season]) {
         
@@ -41,6 +41,8 @@ class SeasonListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SeasonTable.dataSource = self
+        SeasonTable.delegate = self
 
         // Do any additional setup after loading the view.
     }
@@ -49,14 +51,8 @@ class SeasonListViewController: UIViewController {
     func syncModelWithView() {
         
      }
-
-   
     
-   
-}
-
-extension SeasonListViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return model.count
     }
     
@@ -75,10 +71,35 @@ extension SeasonListViewController: UITableViewDataSource {
         // Sync celda - house (view - model)
         cell?.textLabel?.text = season.nombre
         
+        
         // Devolver la celda
         return cell!
     }
     
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+        // Averiguar la casa que se ha pulsado
+        let season = model[indexPath.row]
+        
+        // Avisar al delegado
+        // Quien quiera, que se conforme al HouseListViewControllerDelegate para hacer lo que tenga que hacer
+        delegate?.seasonListViewController(self, didSelectSeason: season)
+        
+        
+        // Emitir la misma info por notificaciones
+        let notificationCenter = NotificationCenter.default
+        // Creamos la notificación
+        let notification = Notification(name: Notification.Name(SEASON_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [SEASON_KEY: season])
+        
+        // Enviamos la notificación
+        notificationCenter.post(notification)
+    }
 
+    
+    
+   
 }
+
+
