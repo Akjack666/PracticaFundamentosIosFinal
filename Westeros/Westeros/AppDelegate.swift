@@ -49,20 +49,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         episodeListViewController.delegate = episodeDetailViewController
        
         
+        // Creamos los controladores
+        var controllers = [UIViewController]()
+        
+   /*     for eachHouse in houses {
+            controllers.append(HouseDetailViewController(model: eachHouse).wrappedInNavigation())
+        } */
+        
+        
+        controllers.append(HouseListViewController(model: houses).wrappedInNavigation())
+        controllers.append(SeasonListViewController(model: seasons).wrappedInNavigation())
+        
+        // Crear el combinador
+        let tabBarController = UITabBarController()
+        tabBarController.viewControllers = controllers
+        
+        
         
         
         // Creamos el split view controller y asignamos los controladores
         let splitViewController = UISplitViewController()
         splitViewController.viewControllers = [
-         //   houseListViewController.wrappedInNavigation(),
+          //  houseListViewController.wrappedInNavigation(),
          //  houseDetailViewController.wrappedInNavigation(),
-        //    seasonListViewController.wrappedInNavigation(),
+          //  seasonListViewController.wrappedInNavigation(),
          //  seasonDetailViewController.wrappedInNavigation(),
-            episodeListViewController.wrappedInNavigation(),
-            episodeDetailViewController.wrappedInNavigation()
+            tabBarController,
+         //   episodeListViewController.wrappedInNavigation(),
+         //   episodeDetailViewController.wrappedInNavigation()
          
            
         ]
+        
+        
         
         
         // Asignamos el rootViewController del window

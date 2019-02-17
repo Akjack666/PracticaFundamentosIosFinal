@@ -31,6 +31,7 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
         
         self.model = model
         super.init(nibName: nil, bundle: nil)
+        title = "Seasons"
     }
     
     required init?(coder aDecoder: NSCoder) {
