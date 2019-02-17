@@ -88,6 +88,25 @@ final class LocalFactory: HouseFactory, SeasonsFactory {
         
     }
     
+    
+    var episodes: [Episode] {
+        // Formato para las fechas
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        
+        
+        let seasonOne = Season(nombre: "Season 1", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+
+        
+        
+        let episode1_1 = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        let episode1_2 = Episode(titulo: "The Kingsroad", fecha: formatter.date(from: "2011/04/24")!, season: seasonOne)
+        
+        return [episode1_1, episode1_2]
+    }
+    
+    
+    
     func season(named name: String) -> Season? {
         let season = seasons.first{ $0.nombre.uppercased() == name.uppercased() } // Con uppercased() "normalizamos los valores"
         return season

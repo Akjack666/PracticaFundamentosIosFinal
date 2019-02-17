@@ -25,9 +25,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let houses = Repository.local.houses
         let seasons = Repository.local.seasons
         
+        let episodes = Repository.local.episodes
+        
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
         let houseListViewController = HouseListViewController(model: houses)
         let seasonListViewController = SeasonListViewController(model: seasons)
+        let episodeListViewController = EpisodeListViewController(model: episodes)
         
         
         // Recuperar la última casa seleccionada (si hay alguna)
@@ -35,12 +38,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
         let seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
+        let episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
+        
         
         // Asigar delegados
         // Un objeto SOLO PUEDE TENER UN DELEGADO
         // Un objeto, puede ser delegado de muchos otros objetos
         houseListViewController.delegate = houseDetailViewController
         seasonListViewController.delegate = seasonDetailViewController
+        episodeListViewController.delegate = episodeDetailViewController
        
         
         
@@ -50,9 +56,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         splitViewController.viewControllers = [
          //   houseListViewController.wrappedInNavigation(),
          //  houseDetailViewController.wrappedInNavigation(),
-            seasonListViewController.wrappedInNavigation(),
-           seasonDetailViewController.wrappedInNavigation(),
-            
+        //    seasonListViewController.wrappedInNavigation(),
+         //  seasonDetailViewController.wrappedInNavigation(),
+            episodeListViewController.wrappedInNavigation(),
+            episodeDetailViewController.wrappedInNavigation()
          
            
         ]

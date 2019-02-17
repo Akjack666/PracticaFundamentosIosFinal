@@ -38,6 +38,10 @@
 		AC95EB82220CCDB80021E69D /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC95EB80220CCDB80021E69D /* HouseListViewController.xib */; };
 		AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95EB83220CE5EA0021E69D /* MemberListViewController.swift */; };
 		AC95EB86220CE5EA0021E69D /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC95EB84220CE5EA0021E69D /* MemberListViewController.xib */; };
+		B29214EC22196E5100E2F751 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29214EA22196E5100E2F751 /* EpisodeListViewController.swift */; };
+		B29214ED22196E5100E2F751 /* EpisodeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */; };
+		B29214F022196E6F00E2F751 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */; };
+		B29214F122196E6F00E2F751 /* EpisodeDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29214EF22196E6F00E2F751 /* EpisodeDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		AC95EB80220CCDB80021E69D /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		AC95EB83220CE5EA0021E69D /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		AC95EB84220CE5EA0021E69D /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
+		B29214EA22196E5100E2F751 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
+		B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeListViewController.xib; sourceTree = "<group>"; };
+		B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
+		B29214EF22196E6F00E2F751 /* EpisodeDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeDetailViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +129,10 @@
 				45526F4422159596007DDB27 /* SeasonListViewController.xib */,
 				45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */,
 				45526F4822159B6A007DDB27 /* SeasonDetailViewController.xib */,
+				B29214EA22196E5100E2F751 /* EpisodeListViewController.swift */,
+				B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */,
+				B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */,
+				B29214EF22196E6F00E2F751 /* EpisodeDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -299,9 +311,11 @@
 				AC6E68162203929F00EB0430 /* LaunchScreen.storyboard in Resources */,
 				AC95EB82220CCDB80021E69D /* HouseListViewController.xib in Resources */,
 				AC95EB86220CE5EA0021E69D /* MemberListViewController.xib in Resources */,
+				B29214ED22196E5100E2F751 /* EpisodeListViewController.xib in Resources */,
 				45526F4622159596007DDB27 /* SeasonListViewController.xib in Resources */,
 				AC61626C2208F2BC00EC1FD1 /* targaryenSmall.jpg in Resources */,
 				AC6E68132203929F00EB0430 /* Assets.xcassets in Resources */,
+				B29214F122196E6F00E2F751 /* EpisodeDetailViewController.xib in Resources */,
 				AC6162672208EA4D00EC1FD1 /* HouseDetailViewController.xib in Resources */,
 				AC61626B2208F2BC00EC1FD1 /* codeIsComing.png in Resources */,
 			);
@@ -326,6 +340,7 @@
 				AC6162712208FF0500EC1FD1 /* UIViewController+Navigation.swift in Sources */,
 				AC6162662208EA4D00EC1FD1 /* HouseDetailViewController.swift in Sources */,
 				453B2ADF221443F800F7DB28 /* Season.swift in Sources */,
+				B29214F022196E6F00E2F751 /* EpisodeDetailViewController.swift in Sources */,
 				45526F4522159596007DDB27 /* SeasonListViewController.swift in Sources */,
 				AC6E68312203A6DA00EB0430 /* Sigil.swift in Sources */,
 				AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */,
@@ -335,6 +350,7 @@
 				AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */,
 				AC61627B220B9F9C00EC1FD1 /* WikiViewController.swift in Sources */,
 				AC6E68362203A9B200EB0430 /* Person.swift in Sources */,
+				B29214EC22196E5100E2F751 /* EpisodeListViewController.swift in Sources */,
 				AC95EB81220CCDB80021E69D /* HouseListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
