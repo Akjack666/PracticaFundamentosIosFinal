@@ -35,14 +35,16 @@ class SeasonDetailViewController: UIViewController  {
         // Do any additional setup after loading the view.
         
         episodesList.dataSource = self
-       // episodesList.delegate = self
+      //  episodesList.delegate = self
     }
     
     // MARK: - Life Cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    //    syncModelWithView()
+       syncModelWithView()
        // setupUI()
+       // episodesList.dataSource = self
+        
     }
     
     
@@ -54,7 +56,8 @@ class SeasonDetailViewController: UIViewController  {
         tittleSeason.text = model.nombre
         dateSeason.text = "Se estreno el  \(dateFormatter.string(from: model.fecha_lanzamiento))"
         episodesList.dataSource = self
-        
+        self.episodesList.reloadData()
+
 
     }
     
