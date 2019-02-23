@@ -71,13 +71,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         
         
         splitViewController.viewControllers = [
-          //  houseListViewController.wrappedInNavigation(),
+            
             tabBarController,
+          // houseListViewController.wrappedInNavigation(),
             houseDetailViewController.wrappedInNavigation(),
-            seasonDetailViewController.wrappedInNavigation(),
-            episodeDetailViewController.wrappedInNavigation(),
+        //   seasonListViewController.wrappedInNavigation(),
+           seasonDetailViewController.wrappedInNavigation(),
+           episodeDetailViewController.wrappedInNavigation(),
            
-          //  seasonListViewController.wrappedInNavigation(),
+           
            
            
          //   episodeListViewController.wrappedInNavigation(),
@@ -129,11 +131,13 @@ extension AppDelegate : UITabBarDelegate {
         
         if view == "Seasons" {
             print("First tab")
+            
             splitViewController.showDetailViewController(seasonDetailViewController,sender: self)
             
         } else if view == "Westeros" {
             print("Second tab")
             splitViewController.showDetailViewController(houseDetailViewController,sender: self)
+            
         }
         
     }
