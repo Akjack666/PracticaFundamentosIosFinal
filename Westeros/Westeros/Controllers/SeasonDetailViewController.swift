@@ -8,6 +8,13 @@
 
 import UIKit
 
+protocol SeasonDetailViewControllerDelegate {
+    // Should
+    // Will
+    // Did
+    func seasonDetailViewController(_ viewController: SeasonDetailViewController, didSelectEpisode: Episode)
+}
+
 class SeasonDetailViewController: UIViewController  {
 
     @IBOutlet weak var tittleSeason: UILabel!
@@ -15,7 +22,7 @@ class SeasonDetailViewController: UIViewController  {
     @IBOutlet weak var episodesList: UITableView!
     
     var model: Season
-    
+    var delegate: SeasonDetailViewControllerDelegate?
     
     init(model: Season) {
         self.model = model
@@ -37,6 +44,7 @@ class SeasonDetailViewController: UIViewController  {
         // Do any additional setup after loading the view.
         
         episodesList.dataSource = self
+        
       //  episodesList.delegate = self
     }
     
@@ -108,6 +116,11 @@ extension SeasonDetailViewController: UITableViewDataSource {
         
         // Devolver la celda
         return cell!
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        print("Hola")
     }
     
     

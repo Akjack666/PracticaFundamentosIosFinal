@@ -50,8 +50,8 @@ extension Episode {
     }
     
     
-    var proxyForComparison: String {
-        return titulo
+    var proxyForComparison: Date {
+        return fecha
     }
     
 }
@@ -78,7 +78,7 @@ extension Episode: Equatable {
 
 extension Episode: Comparable {
     static func < (lhs: Episode, rhs: Episode) -> Bool {
-        return lhs.titulo < rhs.proxyForComparison
+        return lhs.fecha < rhs.proxyForComparison
     }
 }
 

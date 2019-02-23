@@ -10,7 +10,6 @@
 		453B2ADF221443F800F7DB28 /* Season.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2ADE221443F800F7DB28 /* Season.swift */; };
 		453B2AE1221444F900F7DB28 /* Episode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE0221444F900F7DB28 /* Episode.swift */; };
 		453B2AE52214871000F7DB28 /* EpisodeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE42214871000F7DB28 /* EpisodeTest.swift */; };
-		453B2AE72214872000F7DB28 /* SeasonTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 453B2AE62214872000F7DB28 /* SeasonTest.swift */; };
 		45526F4522159596007DDB27 /* SeasonListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45526F4322159596007DDB27 /* SeasonListViewController.swift */; };
 		45526F4622159596007DDB27 /* SeasonListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 45526F4422159596007DDB27 /* SeasonListViewController.xib */; };
 		45526F4922159B6A007DDB27 /* SeasonDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */; };
@@ -58,7 +57,6 @@
 		453B2ADE221443F800F7DB28 /* Season.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Season.swift; sourceTree = "<group>"; };
 		453B2AE0221444F900F7DB28 /* Episode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Episode.swift; sourceTree = "<group>"; };
 		453B2AE42214871000F7DB28 /* EpisodeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeTest.swift; sourceTree = "<group>"; };
-		453B2AE62214872000F7DB28 /* SeasonTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonTest.swift; sourceTree = "<group>"; };
 		45526F4322159596007DDB27 /* SeasonListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonListViewController.swift; sourceTree = "<group>"; };
 		45526F4422159596007DDB27 /* SeasonListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeasonListViewController.xib; sourceTree = "<group>"; };
 		45526F4722159B6A007DDB27 /* SeasonDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeasonDetailViewController.swift; sourceTree = "<group>"; };
@@ -205,7 +203,6 @@
 				AC6E68322203A8A500EB0430 /* PersonTests.swift */,
 				AC616272220B703B00EC1FD1 /* RepositoryTests.swift */,
 				453B2AE42214871000F7DB28 /* EpisodeTest.swift */,
-				453B2AE62214872000F7DB28 /* SeasonTest.swift */,
 			);
 			path = WesterosTests;
 			sourceTree = "<group>";
@@ -363,7 +360,6 @@
 				453B2AE52214871000F7DB28 /* EpisodeTest.swift in Sources */,
 				AC6E68332203A8A500EB0430 /* PersonTests.swift in Sources */,
 				AC616273220B703B00EC1FD1 /* RepositoryTests.swift in Sources */,
-				453B2AE72214872000F7DB28 /* SeasonTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -28,7 +28,7 @@ class HouseTests: XCTestCase {
         let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
         let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", wikiURL: starkURL)
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", wikiURL: starkURL,named: Name.stark)
         lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido", wikiURL: lannisterURL)
         
         robb = Person(name: "Robb", alias: "El Joven Lobo", house: starkHouse)
@@ -98,6 +98,14 @@ class HouseTests: XCTestCase {
         // [1 , 2, 3 , 4] -> .sorted() -> [1, 2, 3, 4]
         XCTAssertEqual(starkHouse.sortedMembers, starkHouse.sortedMembers.sorted())
     }
+    
+    func testHouseNamed() {
+        
+        // Se podria haber creado dustituyendo al name original, pero he preferido meterlo como opcionar para comprobar que funciona y dejar el anterior
+        XCTAssertEqual(starkHouse.named.rawValue, "stark")
+    }
+    
+    
 }
 
 

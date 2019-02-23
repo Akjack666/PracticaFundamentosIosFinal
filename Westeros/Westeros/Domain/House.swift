@@ -14,19 +14,32 @@ typealias Members = Set<Person>
 final class House {
     // MARK: Properties
     let name: String
+    private let _named: Name?
     let sigil: Sigil
     let words: Words
     let wikiURL: URL
     private var _members: Members
     
+    var named: Name {
+        return _named ?? Name.sinAsignar
+    }
+    
     // MARK: Initialization
-    init(name: String, sigil: Sigil, words: Words, wikiURL: URL) {
+    init(name: String, sigil: Sigil, words: Words, wikiURL: URL, named: Name? = nil) {
         self.name = name
         self.sigil = sigil
         self.words = words
         self.wikiURL = wikiURL
+        _named = named
         _members = Members()
     }
+}
+
+enum Name : String {
+    case stark
+    case lannister
+    case targaryen
+    case sinAsignar
 }
 
 extension House {

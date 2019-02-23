@@ -41,8 +41,8 @@ extension Season {
     }
     
     
-    var proxyForComparison: String {
-        return nombre
+    var proxyForComparison: Date {
+        return fecha_lanzamiento
     }
  
 }
@@ -69,7 +69,7 @@ extension Season: Equatable {
 
 extension Season: Comparable {
     static func < (lhs: Season, rhs: Season) -> Bool {
-        return lhs.nombre < rhs.proxyForComparison
+        return lhs.fecha_lanzamiento < rhs.proxyForComparison
     }
 }
 

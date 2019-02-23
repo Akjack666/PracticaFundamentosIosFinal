@@ -124,7 +124,7 @@ class EpisodeTest: XCTestCase {
     
     
     func testEpisodeComparison() {
-        XCTAssertLessThan(episodioDos, episodioUno)
+        XCTAssertLessThan(episodioUno,episodioDos)
     }
     
     func testSeasonComparison() {
@@ -140,6 +140,7 @@ class EpisodeTest: XCTestCase {
         // [1 , 2, 3 , 4] -> .sorted() -> [1, 2, 3, 4]
         XCTAssertEqual(season1.sortedEpisodes, season1.sortedEpisodes.sorted())
     }
+    
     
  
 

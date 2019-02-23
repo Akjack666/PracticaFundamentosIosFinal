@@ -91,8 +91,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
            
            
            
-         //   episodeListViewController.wrappedInNavigation(),
-         //   episodeDetailViewController.wrappedInNavigation()
+            episodeListViewController!.wrappedInNavigation(),
+            episodeDetailViewController!.wrappedInNavigation()
            
         ]
         
