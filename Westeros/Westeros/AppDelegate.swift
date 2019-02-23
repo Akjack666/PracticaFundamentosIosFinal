@@ -100,7 +100,7 @@ extension AppDelegate : UITabBarDelegate {
     func tabBarController(_ tabBarController: UITabBarController,
                           didSelect viewController: UIViewController) {
         
-        
+        //Esto lo tengo que guardar como propiedades
         let view = viewController.title
         
         // Crearnos los modelos
