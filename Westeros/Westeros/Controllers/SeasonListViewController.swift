@@ -44,6 +44,9 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
         super.viewDidLoad()
         SeasonTable.dataSource = self
         SeasonTable.delegate = self
+       // self.delegate = self
+        
+        
 
         // Do any additional setup after loading the view.
     }

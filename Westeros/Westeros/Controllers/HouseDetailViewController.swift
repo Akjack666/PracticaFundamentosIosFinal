@@ -43,6 +43,14 @@ class HouseDetailViewController: UIViewController {
         wordsLabel.text = model.words
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        syncModelWithView()
+        // setupUI()
+        // episodesList.dataSource = self
+        
+    }
+    
     // MARK: UI
     func setupUI() {
         // Crear los botones
