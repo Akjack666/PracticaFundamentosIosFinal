@@ -16,6 +16,7 @@ class SeasonDetailViewController: UIViewController  {
     
     var model: Season
     
+    
     init(model: Season) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
@@ -62,7 +63,25 @@ class SeasonDetailViewController: UIViewController  {
 
     }
     
+ /*   // MARK: UI
+    func setupUI() {
+        // Crear los botones
+        let episodeButton = UIBarButtonItem(title: "Episode", style: .plain, target: self, action: #selector(displayEpisode))
+
+        
+        // Mostrar los botones
+        navigationItem.rightBarButtonItems = [episodeButton]
+    }
     
+    @objc func displayEpisode() {
+        // Creamos el controlador
+        let episodeDetailController = EpisodeDetailViewController(model: episode)
+        
+        // Lo mostramos mediante push
+        navigationController?.pushViewController(episodeDetailController, animated: true)
+    }
+    
+   */
 
 }
 
@@ -74,7 +93,7 @@ extension SeasonDetailViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         // Descubrir los episodios
-        let episode = model.sortedEpisodes[indexPath.row]
+       let episode = model.sortedEpisodes[indexPath.row]
         
         // Pedir una celda a la tabla (si es que la tiene), o si no, crearla.
         let cellId = "EpisodeCell"
@@ -90,6 +109,8 @@ extension SeasonDetailViewController: UITableViewDataSource {
         // Devolver la celda
         return cell!
     }
+    
+    
     
     }
 

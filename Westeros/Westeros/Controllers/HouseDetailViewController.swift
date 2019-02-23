@@ -46,9 +46,13 @@ class HouseDetailViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         syncModelWithView()
-        // setupUI()
+         setupUI()
         // episodesList.dataSource = self
         
+    }
+    
+    override func viewDidLoad() {
+        syncModelWithView()
     }
     
     // MARK: UI

@@ -15,6 +15,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     // Creamos el split view controller y asignamos los controladores
     let splitViewController = UISplitViewController()
     
+    var houseListViewController : HouseListViewController?
+    var seasonListViewController : SeasonListViewController?
+    var houseDetailViewController : HouseDetailViewController?
+    var seasonDetailViewController : SeasonDetailViewController?
+    var episodeDetailViewController : EpisodeDetailViewController?
+    var episodeListViewController : EpisodeListViewController?
+    
     
 
 
@@ -32,25 +39,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let episodes = Repository.local.episodes
         
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
-        let houseListViewController = HouseListViewController(model: houses)
-        let seasonListViewController = SeasonListViewController(model: seasons)
-        let episodeListViewController = EpisodeListViewController(model: episodes)
+         houseListViewController = HouseListViewController(model: houses)
+         seasonListViewController = SeasonListViewController(model: seasons)
+         episodeListViewController = EpisodeListViewController(model: episodes)
         
         
         // Recuperar la última casa seleccionada (si hay alguna)
-        let lastHouseSelected = houseListViewController.lastSelectedHouse()
+        let lastHouseSelected = houseListViewController!.lastSelectedHouse()
         
-        let houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
-        let seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
-        let episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
+         houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
+         seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
+         episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
         
         
         // Asigar delegados
         // Un objeto SOLO PUEDE TENER UN DELEGADO
         // Un objeto, puede ser delegado de muchos otros objetos
-        houseListViewController.delegate = houseDetailViewController
-        seasonListViewController.delegate = seasonDetailViewController
-        episodeListViewController.delegate = episodeDetailViewController
+        houseListViewController!.delegate = houseDetailViewController
+        seasonListViewController!.delegate = seasonDetailViewController
+        episodeListViewController!.delegate = episodeDetailViewController
         
        
         
@@ -58,8 +65,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         var controllers = [UIViewController]()
         
         
-        controllers.append(HouseListViewController(model: houses).wrappedInNavigation())
-        controllers.append(SeasonListViewController(model: seasons).wrappedInNavigation())
+        controllers.append(houseListViewController!)
+        controllers.append(seasonListViewController!)
+        controllers.append(episodeListViewController!)
+        
         
         // Crear el combinador
         let tabBarController = UITabBarController()
@@ -74,10 +83,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             
             tabBarController,
           // houseListViewController.wrappedInNavigation(),
-            houseDetailViewController.wrappedInNavigation(),
+            houseDetailViewController!.wrappedInNavigation(),
         //   seasonListViewController.wrappedInNavigation(),
-           seasonDetailViewController.wrappedInNavigation(),
-           episodeDetailViewController.wrappedInNavigation(),
+            seasonDetailViewController!.wrappedInNavigation(),
+            episodeDetailViewController!.wrappedInNavigation(),
            
            
            
@@ -86,6 +95,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
          //   episodeDetailViewController.wrappedInNavigation()
            
         ]
+        
+        
         
         
         // Asignamos el rootViewController del window
@@ -103,42 +114,18 @@ extension AppDelegate : UITabBarDelegate {
         //Esto lo tengo que guardar como propiedades
         let view = viewController.title
         
-        // Crearnos los modelos
-        let houses = Repository.local.houses
-        let seasons = Repository.local.seasons
-        
-        let episodes = Repository.local.episodes
-        
-        // Creamos los controladores (el que irá en master, y el que irá en el detail)
-        let houseListViewController = HouseListViewController(model: houses)
-        let seasonListViewController = SeasonListViewController(model: seasons)
-        let episodeListViewController = EpisodeListViewController(model: episodes)
-        
-        
-        // Recuperar la última casa seleccionada (si hay alguna)
-        let lastHouseSelected = houseListViewController.lastSelectedHouse()
-        
-        let houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
-        let seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
-        let episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
-        
-        // Asigar delegados
-        // Un objeto SOLO PUEDE TENER UN DELEGADO
-        // Un objeto, puede ser delegado de muchos otros objetos
-        houseListViewController.delegate = houseDetailViewController
-        seasonListViewController.delegate = seasonDetailViewController
-        episodeListViewController.delegate = episodeDetailViewController
-        
+     
         if view == "Seasons" {
             print("First tab")
             
-            splitViewController.showDetailViewController(seasonDetailViewController,sender: self)
+            splitViewController.showDetailViewController(seasonDetailViewController!,sender: self)
             
         } else if view == "Westeros" {
             print("Second tab")
-            splitViewController.showDetailViewController(houseDetailViewController,sender: self)
+            splitViewController.showDetailViewController(houseDetailViewController!,sender: self)
             
         }
+        
         
     }
     
