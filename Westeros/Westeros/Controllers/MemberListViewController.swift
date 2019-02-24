@@ -8,6 +8,17 @@
 
 import UIKit
 
+
+// Definimos nuestro delegado
+protocol MemberListViewControllerDelegate {
+    // Should
+    // Will
+    // Did
+    func memberListViewController(_ viewController: MemberListViewController, didSelectPerson: Person)
+}
+
+
+
 class MemberListViewController: UIViewController {
 
     // MARK: - Outlets
@@ -15,6 +26,7 @@ class MemberListViewController: UIViewController {
     
     // MARK: Properties
     let model: [Person]
+    var delegate: MemberListViewControllerDelegate?
     
     // MARK: Initialization
     init(model: [Person]) {
@@ -60,6 +72,29 @@ extension MemberListViewController: UITableViewDataSource {
         
         // Devolver la celda
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let person = model[indexPath.row]
+        
+        delegate?.memberListViewController(self, didSelectPerson: person)
+        
+         let memberDetailViewController = MemberDetailViewController(model: person)
+        
+        // Emitir la misma info por notificaciones
+        let notificationCenter = NotificationCenter.default
+        // Creamos la notificación
+        let notification = Notification(name: Notification.Name(MEMBER_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [MEMBER_KEY: person])
+        
+        // Enviamos la notificación
+        notificationCenter.post(notification)
+        
+        navigationController?.pushViewController(memberDetailViewController, animated: true)
+        
+        
+        print(person.name)
+        
     }
 }
 

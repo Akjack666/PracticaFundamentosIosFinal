@@ -37,6 +37,8 @@
 		AC95EB82220CCDB80021E69D /* HouseListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC95EB80220CCDB80021E69D /* HouseListViewController.xib */; };
 		AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC95EB83220CE5EA0021E69D /* MemberListViewController.swift */; };
 		AC95EB86220CE5EA0021E69D /* MemberListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = AC95EB84220CE5EA0021E69D /* MemberListViewController.xib */; };
+		B20561CB222207CC008F7FBA /* MemberDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20561C9222207CC008F7FBA /* MemberDetailViewController.swift */; };
+		B20561CC222207CC008F7FBA /* MemberDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B20561CA222207CC008F7FBA /* MemberDetailViewController.xib */; };
 		B29214EC22196E5100E2F751 /* EpisodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29214EA22196E5100E2F751 /* EpisodeListViewController.swift */; };
 		B29214ED22196E5100E2F751 /* EpisodeListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */; };
 		B29214F022196E6F00E2F751 /* EpisodeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */; };
@@ -88,6 +90,8 @@
 		AC95EB80220CCDB80021E69D /* HouseListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HouseListViewController.xib; sourceTree = "<group>"; };
 		AC95EB83220CE5EA0021E69D /* MemberListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberListViewController.swift; sourceTree = "<group>"; };
 		AC95EB84220CE5EA0021E69D /* MemberListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberListViewController.xib; sourceTree = "<group>"; };
+		B20561C9222207CC008F7FBA /* MemberDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemberDetailViewController.swift; sourceTree = "<group>"; };
+		B20561CA222207CC008F7FBA /* MemberDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MemberDetailViewController.xib; sourceTree = "<group>"; };
 		B29214EA22196E5100E2F751 /* EpisodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeListViewController.swift; sourceTree = "<group>"; };
 		B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EpisodeListViewController.xib; sourceTree = "<group>"; };
 		B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeDetailViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +135,8 @@
 				B29214EB22196E5100E2F751 /* EpisodeListViewController.xib */,
 				B29214EE22196E6F00E2F751 /* EpisodeDetailViewController.swift */,
 				B29214EF22196E6F00E2F751 /* EpisodeDetailViewController.xib */,
+				B20561C9222207CC008F7FBA /* MemberDetailViewController.swift */,
+				B20561CA222207CC008F7FBA /* MemberDetailViewController.xib */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -315,6 +321,7 @@
 				B29214F122196E6F00E2F751 /* EpisodeDetailViewController.xib in Resources */,
 				AC6162672208EA4D00EC1FD1 /* HouseDetailViewController.xib in Resources */,
 				AC61626B2208F2BC00EC1FD1 /* codeIsComing.png in Resources */,
+				B20561CC222207CC008F7FBA /* MemberDetailViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +349,7 @@
 				AC6E68312203A6DA00EB0430 /* Sigil.swift in Sources */,
 				AC95EB85220CE5EA0021E69D /* MemberListViewController.swift in Sources */,
 				45526F4922159B6A007DDB27 /* SeasonDetailViewController.swift in Sources */,
+				B20561CB222207CC008F7FBA /* MemberDetailViewController.swift in Sources */,
 				453B2AE1221444F900F7DB28 /* Episode.swift in Sources */,
 				AC6E682F22039E3000EB0430 /* House.swift in Sources */,
 				AC6E680C2203929E00EB0430 /* AppDelegate.swift in Sources */,

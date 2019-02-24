@@ -21,6 +21,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     var seasonDetailViewController : SeasonDetailViewController?
     var episodeDetailViewController : EpisodeDetailViewController?
     var episodeListViewController : EpisodeListViewController?
+    var memberListViewController : MemberListViewController?
+    var memberDetailViewController : MemberDetailViewController?
     
     
 
@@ -35,13 +37,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Crearnos los modelos
         let houses = Repository.local.houses
         let seasons = Repository.local.seasons
-        
         let episodes = Repository.local.episodes
+        let members = Repository.local.houses[0].sortedMembers
+        
         
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
          houseListViewController = HouseListViewController(model: houses)
          seasonListViewController = SeasonListViewController(model: seasons)
          episodeListViewController = EpisodeListViewController(model: episodes)
+        memberListViewController = MemberListViewController(model: members)
         
         
         // Recuperar la última casa seleccionada (si hay alguna)
@@ -50,6 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
          houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
          seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
          episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
+        memberDetailViewController = MemberDetailViewController(model: lastHouseSelected.sortedMembers[0])
         
         
         // Asigar delegados
@@ -58,6 +63,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         houseListViewController!.delegate = houseDetailViewController
         seasonListViewController!.delegate = seasonDetailViewController
         episodeListViewController!.delegate = episodeDetailViewController
+        memberListViewController!.delegate = memberDetailViewController
+        
         
        
         

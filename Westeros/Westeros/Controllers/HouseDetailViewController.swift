@@ -41,18 +41,20 @@ class HouseDetailViewController: UIViewController {
         houseNameLabel.text = "House \(model.name)"
         sigilImageView.image = model.sigil.image
         wordsLabel.text = model.words
+        title = model.name
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         syncModelWithView()
-         setupUI()
+        setupUI()
         // episodesList.dataSource = self
         
     }
     
     override func viewDidLoad() {
         syncModelWithView()
+        setupUI()
     }
     
     // MARK: UI
