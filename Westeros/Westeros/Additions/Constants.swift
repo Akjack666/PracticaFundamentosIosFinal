@@ -23,3 +23,6 @@ let MEMBER_DID_CHANGE_NOTIFICATION_NAME = "MemberDidChangeNotificationName"
 let MEMBER_KEY = "MemberKey"
 let LAST_MEMBER_KEY = "Last member key"
 
+let EPISODE_DID_CHANGE_NOTIFICATION_NAME = "EpisodeDidChangeNotificationName"
+let EPISODE_KEY = "EpisodeKey"
+let LAST_Episode_KEY = "Last episode key"

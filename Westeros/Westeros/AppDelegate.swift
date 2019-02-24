@@ -45,7 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
          houseListViewController = HouseListViewController(model: houses)
          seasonListViewController = SeasonListViewController(model: seasons)
          episodeListViewController = EpisodeListViewController(model: episodes)
-        memberListViewController = MemberListViewController(model: members)
+         memberListViewController = MemberListViewController(model: members)
         
         
         // Recuperar la última casa seleccionada (si hay alguna)
@@ -62,8 +62,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Un objeto, puede ser delegado de muchos otros objetos
         houseListViewController!.delegate = houseDetailViewController
         seasonListViewController!.delegate = seasonDetailViewController
-        episodeListViewController!.delegate = episodeDetailViewController
+     //   episodeListViewController!.delegate = episodeDetailViewController
         memberListViewController!.delegate = memberDetailViewController
+       seasonDetailViewController!.delegate = episodeDetailViewController
         
         
        
@@ -94,10 +95,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         //   seasonListViewController.wrappedInNavigation(),
             seasonDetailViewController!.wrappedInNavigation(),
             episodeDetailViewController!.wrappedInNavigation(),
-           
-           
-           
-           
             episodeListViewController!.wrappedInNavigation(),
             episodeDetailViewController!.wrappedInNavigation()
            

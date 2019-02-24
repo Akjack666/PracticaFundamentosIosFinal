@@ -43,6 +43,35 @@ class EpisodeDetailViewController: UIViewController {
         // setupUI()
         // episodesList.dataSource = self
         
+        // Nos damos de alta en las notificaciones
+        // Tan pronto como te des de alta, implementa el código para darte de baja. Si no, te olvidarás
+        let notificationCenter = NotificationCenter.default
+        let name = Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME)
+        
+        notificationCenter.addObserver(self,
+                                       selector: #selector(episodeDidChange(notification:)),
+                                       name: name,
+                                       object: nil) // Object es quien manda la notific
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Nos damos de baja en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    
+    @objc func episodeDidChange(notification: Notification) {
+        // Sacar el userInfo de la noti, y la casa del userInfo
+        guard let info = notification.userInfo,
+            let episode = info[EPISODE_KEY] as? Episode else {
+                return
+        }
+        
+        model = episode
+        
     }
     
     
@@ -65,12 +94,13 @@ class EpisodeDetailViewController: UIViewController {
 
 
 
-extension EpisodeDetailViewController: EpisodeListViewControllerDelegate {
-    func episodeListViewController(_ viewController: EpisodeListViewController, didSelectSeason episode: Episode) {
+extension EpisodeDetailViewController: SeasonDetailViewControllerDelegate {
+    func seasonDetailViewController(_ viewController: SeasonDetailViewController, didSelectEpisode episode: Episode) {
         // Re-asigna el modelo
         self.model = episode
         
         // Sincroniza modelo (el nuevo) con la vista
         syncModelWithView()
     }
+    
 }

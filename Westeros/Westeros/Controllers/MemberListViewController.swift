@@ -130,7 +130,7 @@ extension MemberListViewController: UITableViewDataSource {
         navigationController?.pushViewController(memberDetailViewController, animated: true)
         
         
-        print(person.name)
+        
         
     }
 }

@@ -22,6 +22,7 @@ class SeasonDetailViewController: UIViewController  {
     @IBOutlet weak var episodesList: UITableView!
     
     var model: Season
+    
     var delegate: SeasonDetailViewControllerDelegate?
     
     init(model: Season) {
@@ -44,6 +45,7 @@ class SeasonDetailViewController: UIViewController  {
         // Do any additional setup after loading the view.
         
         episodesList.dataSource = self
+        episodesList.delegate = self
         
       //  episodesList.delegate = self
     }
@@ -54,7 +56,8 @@ class SeasonDetailViewController: UIViewController  {
        syncModelWithView()
        // setupUI()
        // episodesList.dataSource = self
-        
+        episodesList.dataSource = self
+        episodesList.delegate = self
     }
     
     
@@ -118,6 +121,27 @@ extension SeasonDetailViewController: UITableViewDataSource {
         return cell!
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let episode = model.sortedEpisodes[indexPath.row]
+        
+        delegate?.seasonDetailViewController(self, didSelectEpisode: episode)
+        
+         let episodeDetailViewController = EpisodeDetailViewController(model: episode)
+        
+/*        // Emitir la misma info por notificaciones
+        let notificationCenter = NotificationCenter.default
+        // Creamos la notificación
+        let notification = Notification(name: Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [EPISODE_KEY: episode])
+        
+        // Enviamos la notificación
+        notificationCenter.post(notification)
+     */
+        navigationController?.pushViewController(episodeDetailViewController, animated: true)
+       
+        print(episode)
+        
+    }
     
     
     
@@ -137,7 +161,16 @@ extension SeasonDetailViewController: SeasonListViewControllerDelegate {
 }
 
 
-
-
+extension SeasonDetailViewController: UITableViewDelegate {
     
+    
+}
+
+
+
+extension EpisodeDetailViewController: UITableViewDelegate {
+    
+    
+    
+}
 
