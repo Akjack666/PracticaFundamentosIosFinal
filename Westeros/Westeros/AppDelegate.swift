@@ -111,6 +111,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     
 }
 
+// Detectar viewcontroller en la tab
 extension AppDelegate : UITabBarDelegate {
     func tabBarController(_ tabBarController: UITabBarController,
                           didSelect viewController: UIViewController) {
