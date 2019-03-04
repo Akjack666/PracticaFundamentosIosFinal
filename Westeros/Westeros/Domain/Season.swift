@@ -17,17 +17,17 @@ final class Season {
     // Propiedades
     
      // no puede estar vacio, una temporada tiene que tener minimo un episodio
-    var nombre: String
-    var fecha_lanzamiento: Date
+    var name: String
+    var releaseDate: Date
     public var _episodes: Episodes
     
     
     
     //Inicializacion
     
-    init(nombre: String, fecha_lanzamiento: Date) {
-        self.nombre = nombre
-        self.fecha_lanzamiento = fecha_lanzamiento
+    init(name: String, releaseDate: Date) {
+        self.name = name
+        self.releaseDate = releaseDate
         _episodes = Episodes()
     }
     
@@ -37,12 +37,12 @@ final class Season {
 // Proxys de igualdad y comparacion
 extension Season {
     var proxyForEquality: String {
-        return "\(nombre) \(fecha_lanzamiento)"
+        return "\(name) \(releaseDate)"
     }
     
     
     var proxyForComparison: Date {
-        return fecha_lanzamiento
+        return releaseDate
     }
  
 }
@@ -69,7 +69,7 @@ extension Season: Equatable {
 
 extension Season: Comparable {
     static func < (lhs: Season, rhs: Season) -> Bool {
-        return lhs.fecha_lanzamiento < rhs.proxyForComparison
+        return lhs.proxyForComparison < rhs.proxyForComparison
     }
 }
 
@@ -77,7 +77,7 @@ extension Season: Comparable {
 
 extension Season: CustomStringConvertible {
     var description: String {
-        return "La temporada \(nombre) se lanzo en \(fecha_lanzamiento) con \(_episodes.count) episodios"
+        return "La temporada \(name) se lanzo en \(releaseDate) con \(_episodes.count) episodios"
     }
 }
 
@@ -96,7 +96,7 @@ extension Season {
     }
     
     func add(episode: Episode) {
-        guard episode._season?.nombre == nombre else { return }
+        guard episode._season?.name == name else { return }
         _episodes.insert(episode)
     }
     

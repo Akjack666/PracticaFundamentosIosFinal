@@ -31,19 +31,19 @@ class EpisodeTest: XCTestCase {
        
         
         //Episodios
-        episodioUno = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
-        episodio1 = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        episodioUno = Episode(title: "Winter is comming", date: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        episodio1 = Episode(title: "Winter is comming", date: formatter.date(from: "2011/04/17")!, season: seasonOne)
 
-        episodioDos = Episode(titulo: "The Kingsroad", fecha: formatter.date(from: "2011/04/24")!, season: seasonOne)
+        episodioDos = Episode(title: "The Kingsroad", date: formatter.date(from: "2011/04/24")!, season: seasonOne)
         
        
         //Primera temporada
         
-        seasonOne = Season(nombre: "Cancion de hielo y fuego", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
-        season1 = Season(nombre: "Cancion de hielo y fuego", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+        seasonOne = Season(name: "Cancion de hielo y fuego", releaseDate: formatter.date(from: "2011/04/17")!)
+        season1 = Season(name: "Cancion de hielo y fuego", releaseDate: formatter.date(from: "2011/04/17")!)
         
         
-        seasonTwo = Season(nombre: "Choque de reyes", fecha_lanzamiento: formatter.date(from: "2012/04/01")!)
+        seasonTwo = Season(name: "Choque de reyes", releaseDate: formatter.date(from: "2012/04/01")!)
         
         
     }

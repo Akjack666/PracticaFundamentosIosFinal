@@ -80,9 +80,9 @@ class EpisodeDetailViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         print("Desde aqui \(model)")
-        seasonTitle.text = model._season?.nombre
-        episodeDate.text = "Se estreno el  \(dateFormatter.string(from: model.fecha))"
-        episodeTitle.text = model.titulo
+        seasonTitle.text = model._season?.name
+        episodeDate.text = "Se estreno el  \(dateFormatter.string(from: model.date))"
+        episodeTitle.text = model.title
         episodeDescription.text = model.description
         
         

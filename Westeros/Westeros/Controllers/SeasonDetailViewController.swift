@@ -28,7 +28,7 @@ class SeasonDetailViewController: UIViewController  {
     init(model: Season) {
         self.model = model
         super.init(nibName: nil, bundle: nil)
-        title = model.nombre
+        title = model.name
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -66,8 +66,8 @@ class SeasonDetailViewController: UIViewController  {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
         print("Desde aqui \(model)")
-        tittleSeason.text = model.nombre
-        dateSeason.text = "Se estreno el  \(dateFormatter.string(from: model.fecha_lanzamiento))"
+        tittleSeason.text = model.name
+        dateSeason.text = "Se estreno el  \(dateFormatter.string(from: model.releaseDate))"
         episodesList.dataSource = self
         self.episodesList.reloadData()
 
@@ -114,7 +114,7 @@ extension SeasonDetailViewController: UITableViewDataSource {
         }
         
         // Sincronizar modelo y vista
-        cell?.textLabel?.text = episode.titulo
+        cell?.textLabel?.text = episode.title
         cell?.detailTextLabel?.text = episode.description
         
         // Devolver la celda

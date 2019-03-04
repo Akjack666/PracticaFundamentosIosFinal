@@ -42,37 +42,37 @@ final class LocalFactory: HouseFactory, SeasonsFactory {
         
         
         // Temporadas
-       let seasonOne = Season(nombre: "Season 1", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
-       let seasonTwo = Season(nombre: "Season 2", fecha_lanzamiento: formatter.date(from: "2012/04/01")!)
-       let seasonThree = Season(nombre: "Season 3", fecha_lanzamiento: formatter.date(from: "2013/03/31")!)
-       let seasonFour = Season(nombre: "Season 4", fecha_lanzamiento: formatter.date(from: "2014/04/06")!)
-       let seasonFive = Season(nombre: "Season 5", fecha_lanzamiento: formatter.date(from: "2015/04/12")!)
-       let seasonSix = Season(nombre: "Season 6", fecha_lanzamiento: formatter.date(from: "2016/04/24")!)
-       let seasonSeven = Season(nombre: "Season 7", fecha_lanzamiento: formatter.date(from: "2017/06/16")!)
+        let seasonOne = Season(name: "Season 1", releaseDate: formatter.date(from: "2011/04/17")!)
+        let seasonTwo = Season(name: "Season 2", releaseDate: formatter.date(from: "2012/04/01")!)
+        let seasonThree = Season(name: "Season 3", releaseDate: formatter.date(from: "2013/03/31")!)
+        let seasonFour = Season(name: "Season 4", releaseDate: formatter.date(from: "2014/04/06")!)
+        let seasonFive = Season(name: "Season 5", releaseDate: formatter.date(from: "2015/04/12")!)
+        let seasonSix = Season(name: "Season 6", releaseDate: formatter.date(from: "2016/04/24")!)
+        let seasonSeven = Season(name: "Season 7", releaseDate: formatter.date(from: "2017/06/16")!)
         
         
         // Episodios
        
-      let episode1_1 = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
-      let episode1_2 = Episode(titulo: "The Kingsroad", fecha: formatter.date(from: "2011/04/24")!, season: seasonOne)
+        let episode1_1 = Episode(title: "Winter is comming", date: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        let episode1_2 = Episode(title: "The Kingsroad", date: formatter.date(from: "2011/04/24")!, season: seasonOne)
         
-      let episode2_1 = Episode(titulo: "The Notrh Remembers", fecha: formatter.date(from: "2012/04/01")!, season: seasonTwo)
-      let episode2_2 = Episode(titulo: "The Nigth Lands", fecha: formatter.date(from: "2012/04/08")!, season: seasonTwo)
+        let episode2_1 = Episode(title: "The Notrh Remembers", date: formatter.date(from: "2012/04/01")!, season: seasonTwo)
+        let episode2_2 = Episode(title: "The Nigth Lands", date: formatter.date(from: "2012/04/08")!, season: seasonTwo)
         
-      let episode3_1 = Episode(titulo: "Valar Dohaeris", fecha: formatter.date(from: "2013/03/31")!, season: seasonThree)
-      let episode3_2 = Episode(titulo: "Dark wings, dark words", fecha: formatter.date(from: "2013/04/6")!, season: seasonThree)
+        let episode3_1 = Episode(title: "Valar Dohaeris", date: formatter.date(from: "2013/03/31")!, season: seasonThree)
+        let episode3_2 = Episode(title: "Dark wings, dark words", date: formatter.date(from: "2013/04/6")!, season: seasonThree)
         
-      let episode4_1 = Episode(titulo: "Two swords", fecha: formatter.date(from: "2014/04/06")!, season: seasonFour)
-      let episode4_2 = Episode(titulo: "The Lion and the rose", fecha: formatter.date(from: "2014/04/13")!, season: seasonFour)
+        let episode4_1 = Episode(title: "Two swords", date: formatter.date(from: "2014/04/06")!, season: seasonFour)
+        let episode4_2 = Episode(title: "The Lion and the rose", date: formatter.date(from: "2014/04/13")!, season: seasonFour)
         
-      let episode5_1 = Episode(titulo: "The wars to come", fecha: formatter.date(from: "2015/04/12")!, season: seasonFive)
-      let episode5_2 = Episode(titulo: "The house of black and white", fecha: formatter.date(from: "2015/04/19")!, season: seasonFive)
+        let episode5_1 = Episode(title: "The wars to come", date: formatter.date(from: "2015/04/12")!, season: seasonFive)
+        let episode5_2 = Episode(title: "The house of black and white", date: formatter.date(from: "2015/04/19")!, season: seasonFive)
         
-      let episode6_1 = Episode(titulo: "The red woman", fecha: formatter.date(from: "2016/04/24")!, season: seasonSix)
-      let episode6_2 = Episode(titulo: "Home", fecha: formatter.date(from: "2016/05/01")!, season: seasonSix)
+        let episode6_1 = Episode(title: "The red woman", date: formatter.date(from: "2016/04/24")!, season: seasonSix)
+        let episode6_2 = Episode(title: "Home", date: formatter.date(from: "2016/05/01")!, season: seasonSix)
         
-      let episode7_1 = Episode(titulo: "Dragon Stone", fecha: formatter.date(from: "2017/06/16")!, season: seasonSeven)
-      let episode7_2 = Episode(titulo: "Stormborn", fecha: formatter.date(from: "2017/06/23")!, season: seasonSeven)
+        let episode7_1 = Episode(title: "Dragon Stone", date: formatter.date(from: "2017/06/16")!, season: seasonSeven)
+        let episode7_2 = Episode(title: "Stormborn", date: formatter.date(from: "2017/06/23")!, season: seasonSeven)
         
         
         seasonOne.add(episodes: episode1_1, episode1_2)
@@ -95,12 +95,12 @@ final class LocalFactory: HouseFactory, SeasonsFactory {
         formatter.dateFormat = "yyyy/MM/dd"
         
         
-        let seasonOne = Season(nombre: "Season 1", fecha_lanzamiento: formatter.date(from: "2011/04/17")!)
+        let seasonOne = Season(name: "Season 1", releaseDate: formatter.date(from: "2011/04/17")!)
 
         
         
-        let episode1_1 = Episode(titulo: "Winter is comming", fecha: formatter.date(from: "2011/04/17")!, season: seasonOne)
-        let episode1_2 = Episode(titulo: "The Kingsroad", fecha: formatter.date(from: "2011/04/24")!, season: seasonOne)
+        let episode1_1 = Episode(title: "Winter is comming", date: formatter.date(from: "2011/04/17")!, season: seasonOne)
+        let episode1_2 = Episode(title: "The Kingsroad", date: formatter.date(from: "2011/04/24")!, season: seasonOne)
         
         return [episode1_1, episode1_2]
     }
@@ -108,7 +108,7 @@ final class LocalFactory: HouseFactory, SeasonsFactory {
     
     
     func season(named name: String) -> Season? {
-        let season = seasons.first{ $0.nombre.uppercased() == name.uppercased() } // Con uppercased() "normalizamos los valores"
+        let season = seasons.first{ $0.name.uppercased() == name.uppercased() } // Con uppercased() "normalizamos los valores"
         return season
     }
     

@@ -17,8 +17,8 @@ final class Episode {
     // Propiedades
     
     weak var _season: Season? // Asumimos que puede haber episodios que no pertenezcan a una temporada
-    var titulo: String
-    var fecha: Date
+    var title: String
+    var date: Date
     
     
     /*
@@ -34,9 +34,9 @@ final class Episode {
     
     // Inicializacion
     
-    init(titulo: String, fecha: Date, season: Season? = nil) {
-        self.titulo = titulo
-        self.fecha = fecha
+    init(title: String, date: Date, season: Season? = nil) {
+        self.title = title
+        self.date = date
         _season = season
     }
     
@@ -46,12 +46,12 @@ final class Episode {
 // Proxys de igualdad y comparacion
 extension Episode {
     var proxyForEquality: String {
-        return "\(titulo) \(fecha)"
+        return "\(title) \(date)"
     }
     
     
     var proxyForComparison: Date {
-        return fecha
+        return date
     }
     
 }
@@ -78,7 +78,7 @@ extension Episode: Equatable {
 
 extension Episode: Comparable {
     static func < (lhs: Episode, rhs: Episode) -> Bool {
-        return lhs.fecha < rhs.proxyForComparison
+        return lhs.proxyForComparison < rhs.proxyForComparison
     }
 }
 
@@ -86,7 +86,7 @@ extension Episode: Comparable {
 
 extension Episode: CustomStringConvertible {
     var description: String {
-        return "El episodio \(titulo) se lanzo en \(fecha) y pertenece a la temporada \(String(describing: _season?.nombre))"
+        return "El episodio \(title) se lanzo en \(date) y pertenece a la temporada \(String(describing: _season?.name))"
     }
 }
 

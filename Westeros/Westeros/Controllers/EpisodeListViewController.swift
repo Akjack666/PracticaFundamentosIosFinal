@@ -59,7 +59,7 @@ class EpisodeListViewController: UIViewController, UITableViewDelegate, UITableV
         }
         
         // Sync celda - house (view - model)
-        cell?.textLabel?.text = episode.titulo
+        cell?.textLabel?.text = episode.title
         
         
         // Devolver la celda

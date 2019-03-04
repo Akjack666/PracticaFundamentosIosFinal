@@ -64,7 +64,7 @@ class RepositoryTests: XCTestCase {
     func testLocalRepositoryReturnsSeasonsByNameCaseInsensitively() {
         let seasonOne = Repository.local.season(named: "SeAsOn 1")
         XCTAssertNotNil(seasonOne)
-        XCTAssertEqual(seasonOne?.nombre, "Season 1")
+        XCTAssertEqual(seasonOne?.name, "Season 1")
         
         let keepcodig = Repository.local.season(named: "Keepcoding")
         XCTAssertNil(keepcodig)

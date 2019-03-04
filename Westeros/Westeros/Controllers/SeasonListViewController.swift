@@ -73,7 +73,7 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
         }
         
         // Sync celda - house (view - model)
-        cell?.textLabel?.text = season.nombre
+        cell?.textLabel?.text = season.name
         
         
         // Devolver la celda
