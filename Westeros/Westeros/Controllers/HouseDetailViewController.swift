@@ -64,6 +64,8 @@ class HouseDetailViewController: UIViewController {
         
         let membersButton = UIBarButtonItem(title: "Members", style: .plain, target: self, action: #selector(displayMembers))
         
+    
+        
         
         
         // Mostrar los botones

@@ -47,7 +47,9 @@ class SeasonDetailViewController: UIViewController  {
         episodesList.dataSource = self
         episodesList.delegate = self
         
-      //  episodesList.delegate = self
+        
+        
+      
     }
     
     // MARK: - Life Cycle
@@ -58,6 +60,41 @@ class SeasonDetailViewController: UIViewController  {
        // episodesList.dataSource = self
         episodesList.dataSource = self
         episodesList.delegate = self
+        
+        // Nos damos de alta en las notificaciones
+        // Tan pronto como te des de alta, implementa el código para darte de baja. Si no, te olvidarás
+        let notificationCenter = NotificationCenter.default
+        let name = Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME)
+        
+        notificationCenter.addObserver(self,
+                                       selector: #selector(episodeDidChange(notification:)),
+                                       name: name,
+                                       object: nil) // Object es quien manda la notific
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        // Nos damos de baja en las notificaciones
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.removeObserver(self)
+    }
+    
+    
+    @objc func episodeDidChange(notification: Notification) {
+        // Sacar el userInfo de la noti, y la casa del userInfo
+        guard let info = notification.userInfo,
+            let episode = info[EPISODE_KEY] as? Episode else {
+                print("Desde notificacion")
+                return
+        }
+        
+        
+        model = episode._season!
+        
+        syncModelWithView()
+        
+    
     }
     
     
@@ -68,31 +105,13 @@ class SeasonDetailViewController: UIViewController  {
         print("Desde aqui \(model)")
         tittleSeason.text = model.name
         dateSeason.text = "Se estreno el  \(dateFormatter.string(from: model.releaseDate))"
+        title = model.name
         episodesList.dataSource = self
         self.episodesList.reloadData()
 
 
     }
     
- /*   // MARK: UI
-    func setupUI() {
-        // Crear los botones
-        let episodeButton = UIBarButtonItem(title: "Episode", style: .plain, target: self, action: #selector(displayEpisode))
-
-        
-        // Mostrar los botones
-        navigationItem.rightBarButtonItems = [episodeButton]
-    }
-    
-    @objc func displayEpisode() {
-        // Creamos el controlador
-        let episodeDetailController = EpisodeDetailViewController(model: episode)
-        
-        // Lo mostramos mediante push
-        navigationController?.pushViewController(episodeDetailController, animated: true)
-    }
-    
-   */
 
 }
 
@@ -121,31 +140,7 @@ extension SeasonDetailViewController: UITableViewDataSource {
         return cell!
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        let episode = model.sortedEpisodes[indexPath.row]
-        
-        delegate?.seasonDetailViewController(self, didSelectEpisode: episode)
-        
-         let episodeDetailViewController = EpisodeDetailViewController(model: episode)
-        
-/*        // Emitir la misma info por notificaciones
-        let notificationCenter = NotificationCenter.default
-        // Creamos la notificación
-        let notification = Notification(name: Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [EPISODE_KEY: episode])
-        
-        // Enviamos la notificación
-        notificationCenter.post(notification)
-     */
-        navigationController?.pushViewController(episodeDetailViewController, animated: true)
-       
-        print(episode)
-        
-    }
-    
-    
-    
-    
+
     
     }
 
@@ -163,14 +158,27 @@ extension SeasonDetailViewController: SeasonListViewControllerDelegate {
 
 extension SeasonDetailViewController: UITableViewDelegate {
     
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let episode = model.sortedEpisodes[indexPath.row]
+        
+        delegate?.seasonDetailViewController(self, didSelectEpisode: episode)
+        
+        let episodeDetailViewController = EpisodeDetailViewController(model: episode)
+        
+        // Emitir la misma info por notificaciones
+        let notificationCenter = NotificationCenter.default
+        // Creamos la notificación
+        let notification = Notification(name: Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME), object: self, userInfo: [EPISODE_KEY: episode])
+        
+        // Enviamos la notificación
+        notificationCenter.post(notification)
+        
+        navigationController?.pushViewController(episodeDetailViewController, animated: true)
+        
+        print(episode)
+        
+    }
 }
 
-
-
-extension EpisodeDetailViewController: UITableViewDelegate {
-    
-    
-    
-}
 

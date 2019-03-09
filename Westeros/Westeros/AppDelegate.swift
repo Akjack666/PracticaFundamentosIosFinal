@@ -21,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     var seasonDetailViewController : SeasonDetailViewController?
     var episodeDetailViewController : EpisodeDetailViewController?
     var episodeListViewController : EpisodeListViewController?
-    var memberListViewController : MemberListViewController?
-    var memberDetailViewController : MemberDetailViewController?
+   
     
-    
+   
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -38,14 +37,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         let houses = Repository.local.houses
         let seasons = Repository.local.seasons
         let episodes = Repository.local.episodes
-        let members = Repository.local.houses[0].sortedMembers
+      //  let members = Repository.local.houses[0].sortedMembers
         
         
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
          houseListViewController = HouseListViewController(model: houses)
          seasonListViewController = SeasonListViewController(model: seasons)
          episodeListViewController = EpisodeListViewController(model: episodes)
-         memberListViewController = MemberListViewController(model: members)
+     
         
         
         // Recuperar la última casa seleccionada (si hay alguna)
@@ -54,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
          houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
          seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
          episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
-        memberDetailViewController = MemberDetailViewController(model: lastHouseSelected.sortedMembers[0])
+    
         
         
         // Asigar delegados
@@ -62,20 +61,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Un objeto, puede ser delegado de muchos otros objetos
         houseListViewController!.delegate = houseDetailViewController
         seasonListViewController!.delegate = seasonDetailViewController
-     //   episodeListViewController!.delegate = episodeDetailViewController
-        memberListViewController!.delegate = memberDetailViewController
-       seasonDetailViewController!.delegate = episodeDetailViewController
-        
-        
-       
+     
+     
+
         
         // Creamos los controladores
         var controllers = [UIViewController]()
         
         
-        controllers.append(houseListViewController!)
-        controllers.append(seasonListViewController!)
-        controllers.append(episodeListViewController!)
+        controllers.append(houseListViewController!.wrappedInNavigation())
+        controllers.append(seasonListViewController!.wrappedInNavigation())
+        
+        
         
         
         // Crear el combinador
@@ -84,31 +81,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         tabBarController.delegate = self
         
         
-        
-        
-        
         splitViewController.viewControllers = [
             
             tabBarController,
-          // houseListViewController.wrappedInNavigation(),
             houseDetailViewController!.wrappedInNavigation(),
-        //   seasonListViewController.wrappedInNavigation(),
             seasonDetailViewController!.wrappedInNavigation(),
-            episodeDetailViewController!.wrappedInNavigation(),
-            episodeListViewController!.wrappedInNavigation(),
-            episodeDetailViewController!.wrappedInNavigation()
-           
         ]
         
-        
-        
-        
+
         // Asignamos el rootViewController del window
         window?.rootViewController = splitViewController
         
         return true
     }
     
+
 }
 
 // Detectar viewcontroller en la tab
@@ -123,11 +110,11 @@ extension AppDelegate : UITabBarDelegate {
         if view == "Seasons" {
             print("First tab")
             
-            splitViewController.showDetailViewController(seasonDetailViewController!,sender: self)
+            splitViewController.showDetailViewController((seasonDetailViewController?.wrappedInNavigation())!,sender: self)
             
         } else if view == "Westeros" {
             print("Second tab")
-            splitViewController.showDetailViewController(houseDetailViewController!,sender: self)
+            splitViewController.showDetailViewController((houseDetailViewController?.wrappedInNavigation())!,sender: self)
             
         }
         

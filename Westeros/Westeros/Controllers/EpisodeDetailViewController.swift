@@ -34,6 +34,8 @@ class EpisodeDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
     }
     
     // MARK: - Life Cycle
@@ -45,7 +47,7 @@ class EpisodeDetailViewController: UIViewController {
         
         // Nos damos de alta en las notificaciones
         // Tan pronto como te des de alta, implementa el código para darte de baja. Si no, te olvidarás
-        let notificationCenter = NotificationCenter.default
+       let notificationCenter = NotificationCenter.default
         let name = Notification.Name(EPISODE_DID_CHANGE_NOTIFICATION_NAME)
         
         notificationCenter.addObserver(self,
@@ -67,10 +69,14 @@ class EpisodeDetailViewController: UIViewController {
         // Sacar el userInfo de la noti, y la casa del userInfo
         guard let info = notification.userInfo,
             let episode = info[EPISODE_KEY] as? Episode else {
+                print("Desde notificacion")
+               
                 return
         }
+    
         
         model = episode
+        
         
     }
     
@@ -79,7 +85,7 @@ class EpisodeDetailViewController: UIViewController {
         
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-MM-yyyy"
-        print("Desde aqui \(model)")
+
         seasonTitle.text = model._season?.name
         episodeDate.text = "Se estreno el  \(dateFormatter.string(from: model.date))"
         episodeTitle.text = model.title
@@ -93,14 +99,3 @@ class EpisodeDetailViewController: UIViewController {
 }
 
 
-
-extension EpisodeDetailViewController: SeasonDetailViewControllerDelegate {
-    func seasonDetailViewController(_ viewController: SeasonDetailViewController, didSelectEpisode episode: Episode) {
-        // Re-asigna el modelo
-        self.model = episode
-        
-        // Sincroniza modelo (el nuevo) con la vista
-        syncModelWithView()
-    }
-    
-}
