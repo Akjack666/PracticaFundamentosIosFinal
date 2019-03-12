@@ -9,7 +9,7 @@
 import UIKit
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     // Creamos el split view controller y asignamos los controladores
@@ -19,10 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
     var seasonListViewController : SeasonListViewController?
     var houseDetailViewController : HouseDetailViewController?
     var seasonDetailViewController : SeasonDetailViewController?
-    var episodeDetailViewController : EpisodeDetailViewController?
-    var episodeListViewController : EpisodeListViewController?
    
-    
+    var seasonDetailNavigation : UINavigationController?
+    var houseDetailNavigation : UINavigationController?
    
 
 
@@ -36,23 +35,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         // Crearnos los modelos
         let houses = Repository.local.houses
         let seasons = Repository.local.seasons
-        let episodes = Repository.local.episodes
-      //  let members = Repository.local.houses[0].sortedMembers
+        
         
         
         // Creamos los controladores (el que irá en master, y el que irá en el detail)
          houseListViewController = HouseListViewController(model: houses)
          seasonListViewController = SeasonListViewController(model: seasons)
-         episodeListViewController = EpisodeListViewController(model: episodes)
+      
      
-        
+       
         
         // Recuperar la última casa seleccionada (si hay alguna)
         let lastHouseSelected = houseListViewController!.lastSelectedHouse()
         
          houseDetailViewController = HouseDetailViewController(model: lastHouseSelected)
          seasonDetailViewController = SeasonDetailViewController(model: seasons[0])
-         episodeDetailViewController = EpisodeDetailViewController(model: episodes[0])
     
         
         
@@ -62,8 +59,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         houseListViewController!.delegate = houseDetailViewController
         seasonListViewController!.delegate = seasonDetailViewController
      
-     
+        seasonDetailNavigation = seasonDetailViewController!.wrappedInNavigation()
+        houseDetailNavigation = houseDetailViewController!.wrappedInNavigation()
 
+       
         
         // Creamos los controladores
         var controllers = [UIViewController]()
@@ -84,9 +83,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         splitViewController.viewControllers = [
             
             tabBarController,
-            houseDetailViewController!.wrappedInNavigation(),
-            seasonDetailViewController!.wrappedInNavigation(),
-        ]
+            houseDetailNavigation,
+            seasonDetailNavigation,
+            ] as! [UIViewController]
         
 
         // Asignamos el rootViewController del window
@@ -99,7 +98,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 }
 
 // Detectar viewcontroller en la tab
-extension AppDelegate : UITabBarDelegate {
+extension AppDelegate : UITabBarControllerDelegate {
     func tabBarController(_ tabBarController: UITabBarController,
                           didSelect viewController: UIViewController) {
         
@@ -110,11 +109,12 @@ extension AppDelegate : UITabBarDelegate {
         if view == "Seasons" {
             print("First tab")
             
-            splitViewController.showDetailViewController((seasonDetailViewController?.wrappedInNavigation())!,sender: self)
+            splitViewController.showDetailViewController(seasonDetailNavigation!,sender: self)
             
         } else if view == "Westeros" {
             print("Second tab")
-            splitViewController.showDetailViewController((houseDetailViewController?.wrappedInNavigation())!,sender: self)
+            
+            splitViewController.showDetailViewController(houseDetailNavigation!,sender: self)
             
         }
         

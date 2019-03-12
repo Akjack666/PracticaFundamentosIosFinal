@@ -21,6 +21,12 @@ class HouseTests: XCTestCase {
     var arya: Person!
     var tyrion: Person!
     
+    enum HouseName : String {
+        case Stark
+        case Lannister
+        case Targaryen
+    }
+    
     override func setUp() {
         starkSigil = Sigil(image: UIImage(), description: "Lobo Huargo")
         lannisterSigil = Sigil(image: UIImage(), description: "León Rampante")
@@ -28,12 +34,13 @@ class HouseTests: XCTestCase {
         let starkURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Stark")!
         let lannisterURL = URL(string: "https://awoiaf.westeros.org/index.php/House_Lannister")!
         
-        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", wikiURL: starkURL,named: Name.stark)
+        starkHouse = House(name: "Stark", sigil: starkSigil, words: "Se acerca el invierno", wikiURL: starkURL)
         lannisterHouse = House(name: "Lannister", sigil: lannisterSigil, words: "Oye mi rugido", wikiURL: lannisterURL)
         
         robb = Person(name: "Robb", alias: "El Joven Lobo", house: starkHouse)
         arya = Person(name: "Arya", house: starkHouse)
         tyrion = Person(name: "Tyrion", alias: "El Enano", house: lannisterHouse)
+        
     }
 
     override func tearDown() {
@@ -99,10 +106,11 @@ class HouseTests: XCTestCase {
         XCTAssertEqual(starkHouse.sortedMembers, starkHouse.sortedMembers.sorted())
     }
     
+    
+    
     func testHouseNamed() {
         
-        // Se podria haber creado dustituyendo al name original, pero he preferido meterlo como opcionar para comprobar que funciona y dejar el anterior
-        XCTAssertEqual(starkHouse.named.rawValue, "stark")
+        XCTAssertEqual(starkHouse.name,HouseName.Stark.rawValue)
     }
     
     

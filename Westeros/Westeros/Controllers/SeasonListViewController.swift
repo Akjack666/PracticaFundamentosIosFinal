@@ -83,8 +83,6 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        
-        
         // Averiguar la casa que se ha pulsado
         let season = model[indexPath.row]
         
@@ -102,8 +100,6 @@ class SeasonListViewController: UIViewController, UITableViewDelegate, UITableVi
         notificationCenter.post(notification)
     }
 
-    
-    
    
 }
 

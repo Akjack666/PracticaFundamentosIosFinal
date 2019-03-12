@@ -26,9 +26,7 @@ class EpisodeTest: XCTestCase {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         
-       
-        
-       
+
         
         //Episodios
         episodioUno = Episode(title: "Winter is comming", date: formatter.date(from: "2011/04/17")!, season: seasonOne)

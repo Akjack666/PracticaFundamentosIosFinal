@@ -111,13 +111,18 @@ extension MemberListViewController: UITableViewDataSource {
         return cell!
     }
     
+    
+}
+
+extension MemberListViewController: UITableViewDelegate {
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         let person = model[indexPath.row]
         
         delegate?.memberListViewController(self, didSelectPerson: person)
         
-         let memberDetailViewController = MemberDetailViewController(model: person)
+        let memberDetailViewController = MemberDetailViewController(model: person)
         
         // Emitir la misma info por notificaciones
         let notificationCenter = NotificationCenter.default
@@ -129,14 +134,7 @@ extension MemberListViewController: UITableViewDataSource {
         
         navigationController?.pushViewController(memberDetailViewController, animated: true)
         
-        
-        
-        
-    }
-}
 
-extension MemberListViewController: UITableViewDelegate {
-    
-    
+    }
     
 }
